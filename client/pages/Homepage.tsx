@@ -5,6 +5,7 @@ import ExpertCard from "@/components/ExpertCard";
 import EventCard from "@/components/EventCard";
 import ThemeCard from "@/components/ThemeCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 import { Link } from "react-router-dom";
 
 export default function Homepage() {
