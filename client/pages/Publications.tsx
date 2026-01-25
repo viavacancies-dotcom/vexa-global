@@ -115,7 +115,7 @@ export default function Publications() {
           </div>
 
           {/* Load More */}
-          <div className="mt-12 text-center">
+          <div className="mt-12 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <button className="px-8 py-3 border border-primary text-primary rounded font-medium hover:bg-primary hover:text-white hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Load More Publications
             </button>
