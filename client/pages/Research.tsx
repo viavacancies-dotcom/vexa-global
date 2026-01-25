@@ -154,7 +154,7 @@ export default function Research() {
           </div>
 
           {/* Pagination */}
-          <div className="mt-12 flex justify-center items-center gap-2">
+          <div className="mt-12 flex justify-center items-center gap-2 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
             <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Previous
             </button>
