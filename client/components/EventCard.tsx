@@ -28,7 +28,11 @@ export default function EventCard({
   };
 
   return (
-    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer">
+    <Link
+      to={`/events/${id}`}
+      className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer no-underline"
+    >
+      <article>
         {/* Image or Accent Bar */}
         {image ? (
           <div className="h-40 bg-muted overflow-hidden">
@@ -75,13 +79,11 @@ export default function EventCard({
           </div>
 
           {/* CTA */}
-          <Link
-            to={`/events/${id}`}
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-          >
+          <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
             Learn More <ArrowRight className="h-4 w-4" />
-          </Link>
+          </span>
         </div>
       </article>
+    </Link>
   );
 }
