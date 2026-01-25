@@ -44,7 +44,7 @@ function ResearchCard({
   return (
     <Link
       to={`/research/${id}`}
-      className="flex flex-col h-full border border-border rounded-xl overflow-hidden bg-card card-interactive group cursor-pointer no-underline shadow-depth-md"
+      className="flex flex-col h-full border border-border rounded-xl overflow-hidden bg-card card-interactive group cursor-pointer no-underline"
     >
       <article>
         {/* Image or Color Accent */}
