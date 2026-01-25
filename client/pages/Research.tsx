@@ -1,6 +1,71 @@
 import { Filter, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
 import ResearchCard from "@/components/ResearchCard";
+import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+
+// Static data - extracted to module level to prevent recreation on every render
+const ALL_RESEARCH = [
+  {
+    id: "1",
+    title: "The Future of International Trade in an Uncertain World",
+    abstract:
+      "This comprehensive analysis examines emerging trade patterns, protectionist trends, and the reshaping of global supply chains.",
+    author: "Dr. Elena Rossi",
+    date: "March 15, 2024",
+    tag: "Trade & Economics",
+    theme: "economics" as const,
+  },
+  {
+    id: "2",
+    title: "Artificial Intelligence and National Security",
+    abstract:
+      "An in-depth examination of AI's implications for military capabilities, cybersecurity, and strategic competition.",
+    author: "Prof. James Mitchell",
+    date: "March 10, 2024",
+    tag: "Technology & Strategy",
+    theme: "technology" as const,
+  },
+  {
+    id: "3",
+    title: "Renewable Energy Transitions in Developing Economies",
+    abstract:
+      "Analyzing the policy frameworks, investment patterns, and technical challenges facing developing nations.",
+    author: "Dr. Amara Okafor",
+    date: "March 5, 2024",
+    tag: "Climate & Energy",
+    theme: "energy" as const,
+  },
+  {
+    id: "4",
+    title: "Geopolitical Implications of Arctic Governance",
+    abstract:
+      "As climate change reshapes the Arctic, new governance challenges emerge. This brief examines current frameworks.",
+    author: "Dr. Sofia Bergström",
+    date: "March 18, 2024",
+    tag: "Geopolitics",
+    theme: "geopolitics" as const,
+  },
+  {
+    id: "5",
+    title: "Regional Integration in Southeast Asia Post-Pandemic",
+    abstract:
+      "Economic recovery and institutional strengthening in ASEAN: opportunities and challenges.",
+    author: "Prof. Rajesh Kumar",
+    date: "March 12, 2024",
+    tag: "Regional Studies",
+    theme: "regional" as const,
+  },
+  {
+    id: "6",
+    title: "Multilateralism at a Crossroads",
+    abstract:
+      "Institutional reform and state sovereignty: reimagining global governance for the 21st century.",
+    author: "Dr. Marcus Weber",
+    date: "March 8, 2024",
+    tag: "International Relations",
+    theme: "relations" as const,
+  },
+];
 
 export default function Research() {
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -9,68 +74,6 @@ export default function Research() {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  const allResearch = [
-    {
-      id: "1",
-      title: "The Future of International Trade in an Uncertain World",
-      abstract:
-        "This comprehensive analysis examines emerging trade patterns, protectionist trends, and the reshaping of global supply chains.",
-      author: "Dr. Elena Rossi",
-      date: "March 15, 2024",
-      tag: "Trade & Economics",
-      theme: "economics" as const,
-    },
-    {
-      id: "2",
-      title: "Artificial Intelligence and National Security",
-      abstract:
-        "An in-depth examination of AI's implications for military capabilities, cybersecurity, and strategic competition.",
-      author: "Prof. James Mitchell",
-      date: "March 10, 2024",
-      tag: "Technology & Strategy",
-      theme: "technology" as const,
-    },
-    {
-      id: "3",
-      title: "Renewable Energy Transitions in Developing Economies",
-      abstract:
-        "Analyzing the policy frameworks, investment patterns, and technical challenges facing developing nations.",
-      author: "Dr. Amara Okafor",
-      date: "March 5, 2024",
-      tag: "Climate & Energy",
-      theme: "energy" as const,
-    },
-    {
-      id: "4",
-      title: "Geopolitical Implications of Arctic Governance",
-      abstract:
-        "As climate change reshapes the Arctic, new governance challenges emerge. This brief examines current frameworks.",
-      author: "Dr. Sofia Bergström",
-      date: "March 18, 2024",
-      tag: "Geopolitics",
-      theme: "geopolitics" as const,
-    },
-    {
-      id: "5",
-      title: "Regional Integration in Southeast Asia Post-Pandemic",
-      abstract:
-        "Economic recovery and institutional strengthening in ASEAN: opportunities and challenges.",
-      author: "Prof. Rajesh Kumar",
-      date: "March 12, 2024",
-      tag: "Regional Studies",
-      theme: "regional" as const,
-    },
-    {
-      id: "6",
-      title: "Multilateralism at a Crossroads",
-      abstract:
-        "Institutional reform and state sovereignty: reimagining global governance for the 21st century.",
-      author: "Dr. Marcus Weber",
-      date: "March 8, 2024",
-      tag: "International Relations",
-      theme: "relations" as const,
-    },
-  ];
 
   return (
     <div>
@@ -165,22 +168,16 @@ export default function Research() {
           </div>
 
           {/* Results Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allResearch.map((research, idx) => (
-              <div
-                key={research.id}
-                className="animate-fade-in-up"
-                style={{
-                  animationDelay: `${idx * 0.1}s`,
-                }}
-              >
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ALL_RESEARCH.map((research, idx) => (
+              <StaggerItem key={research.id} index={idx}>
                 <ResearchCard {...research} />
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Pagination */}
-          <div className="mt-16 flex justify-center items-center gap-3 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="mt-16 flex justify-center items-center gap-3 animate-fade-in-up">
             <button className="px-4 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               Previous
             </button>
