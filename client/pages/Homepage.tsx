@@ -279,7 +279,7 @@ export default function Homepage() {
       </section>
 
       {/* Featured Research Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
