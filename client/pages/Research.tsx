@@ -92,7 +92,7 @@ export default function Research() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-2">Topic</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background">
+                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
                   <option>All Topics</option>
                   <option>Geopolitics & Security</option>
                   <option>International Relations</option>
@@ -104,7 +104,7 @@ export default function Research() {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Region</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background">
+                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
                   <option>All Regions</option>
                   <option>Europe</option>
                   <option>Asia-Pacific</option>
@@ -114,7 +114,7 @@ export default function Research() {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Author</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background">
+                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
                   <option>All Authors</option>
                   <option>Dr. Elena Rossi</option>
                   <option>Prof. James Mitchell</option>
@@ -123,7 +123,7 @@ export default function Research() {
               </div>
               <div>
                 <label className="block text-sm font-medium mb-2">Date Range</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background">
+                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
                   <option>All Dates</option>
                   <option>Last 30 Days</option>
                   <option>Last 90 Days</option>
