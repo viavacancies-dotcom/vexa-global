@@ -291,7 +291,7 @@
 
   /* Navigation link underline with group hover */
   .group .nav-underline {
-    @apply absolute bottom-1 h-0.5 bg-primary transition-all duration-250;
+    @apply absolute bottom-1 h-0.5 bg-primary transition-all duration-200;
     left: 0.5mm;
     width: 0;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
