@@ -39,15 +39,17 @@ export default function MainLayout() {
           <div className="flex items-center justify-between h-16">
             {/* Logo / Institute Name */}
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-serif font-bold text-sm">I</span>
-              </div>
-              <div>
-                <h1 className="font-serif text-lg font-bold text-primary hidden sm:block">
-                  Global Institute
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F30cffefbd891455492f8e1b92fb414ad%2F71548cef8d674304ac09344916bd53c8?format=webp&width=800&height=1200"
+                alt="Vexa Global"
+                className="h-10 sm:h-12 w-auto"
+              />
+              <div className="hidden sm:block">
+                <h1 className="font-garet text-sm font-bold text-foreground">
+                  Vexa Global
                 </h1>
-                <p className="text-xs text-muted-foreground hidden sm:block leading-none">
-                  Policy & Research
+                <p className="text-xs text-muted-foreground leading-none">
+                  Research & Analysis
                 </p>
               </div>
             </Link>
