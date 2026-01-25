@@ -69,7 +69,7 @@ export default function Publications() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-24">
+      <section className="bg-primary text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
             Publications
@@ -81,7 +81,7 @@ export default function Publications() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Tabs */}
           <div className="mb-12 flex flex-wrap gap-4 animate-fade-in-up">
