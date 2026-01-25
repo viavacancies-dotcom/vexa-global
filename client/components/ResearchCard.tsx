@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight } from "lucide-react";
+import { memo } from "react";
 
 interface ResearchCardProps {
   id: string;
