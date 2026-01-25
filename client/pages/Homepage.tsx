@@ -227,7 +227,7 @@ export default function Homepage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light py-20 md:py-32 text-white overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light py-16 md:py-24 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight animate-fade-in-down">
