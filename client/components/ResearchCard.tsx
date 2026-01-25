@@ -41,7 +41,11 @@ export default function ResearchCard({
   };
 
   return (
-    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer">
+    <Link
+      to={`/research/${id}`}
+      className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer no-underline"
+    >
+      <article>
         {/* Image or Color Accent */}
         {image ? (
           <div className="h-40 bg-muted overflow-hidden">
@@ -89,13 +93,11 @@ export default function ResearchCard({
           </div>
 
           {/* CTA */}
-          <Link
-            to={`/research/${id}`}
-            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-all duration-200 ease-in-out hover:gap-3"
-          >
+          <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary group-hover:gap-3 transition-all duration-200 ease-in-out">
             Read More <ArrowRight className="h-4 w-4" />
-          </Link>
+          </span>
         </div>
       </article>
+    </Link>
   );
 }
