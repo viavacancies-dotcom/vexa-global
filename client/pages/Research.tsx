@@ -91,15 +91,17 @@ export default function Research() {
       <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Section */}
-          <div className="mb-12 bg-secondary rounded-lg animate-fade-in-up overflow-hidden">
+          <div className="mb-12 bg-white border border-border rounded-xl shadow-sm animate-fade-in-up overflow-hidden">
             {/* Filter Header */}
             <button
               onClick={() => setFiltersOpen(!filtersOpen)}
-              className="w-full px-6 py-4 flex items-center justify-between hover:bg-secondary/80 transition-colors duration-200"
+              className="w-full px-6 py-5 flex items-center justify-between hover:bg-secondary/30 transition-colors duration-200"
             >
               <div className="flex items-center gap-3">
-                <Filter className="h-5 w-5 text-primary" />
-                <h2 className="text-lg font-serif font-bold">Filter Results</h2>
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <Filter className="h-5 w-5 text-primary" />
+                </div>
+                <h2 className="text-lg font-garet font-semibold text-foreground">Advanced Filters</h2>
               </div>
               <ChevronDown
                 className="h-5 w-5 text-primary transition-transform duration-300"
@@ -117,10 +119,10 @@ export default function Research() {
                 opacity: filtersOpen ? 1 : 0,
               }}
             >
-              <div className="px-6 pb-6 pt-2 border-t border-border grid grid-cols-1 md:grid-cols-4 gap-4">
+              <div className="px-6 pb-6 pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Topic</label>
-                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Topic</label>
+                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
                     <option>All Topics</option>
                     <option>Geopolitics & Security</option>
                     <option>International Relations</option>
@@ -131,8 +133,8 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Region</label>
-                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Region</label>
+                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
                     <option>All Regions</option>
                     <option>Europe</option>
                     <option>Asia-Pacific</option>
@@ -141,8 +143,8 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Author</label>
-                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Author</label>
+                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
                     <option>All Authors</option>
                     <option>Dr. Elena Rossi</option>
                     <option>Prof. James Mitchell</option>
@@ -150,8 +152,8 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Date Range</label>
-                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Date Range</label>
+                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
                     <option>All Dates</option>
                     <option>Last 30 Days</option>
                     <option>Last 90 Days</option>
