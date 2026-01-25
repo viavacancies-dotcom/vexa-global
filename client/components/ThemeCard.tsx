@@ -31,7 +31,7 @@ function ThemeCard({
   return (
     <Link
       to={`/research?topic=${id}`}
-      className="group flex flex-col h-full border border-border rounded-lg p-6 bg-card card-interactive cursor-pointer no-underline shadow-depth-md"
+      className="group flex flex-col h-full border border-border rounded-lg p-6 bg-card card-interactive cursor-pointer no-underline"
     >
       <article>
         {/* Icon */}
