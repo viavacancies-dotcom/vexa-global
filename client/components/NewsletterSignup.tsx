@@ -64,7 +64,7 @@ export default function NewsletterSignup({
           <button
             type="submit"
             disabled={status === "loading"}
-            className="px-6 py-2 bg-primary text-primary-foreground rounded font-medium text-sm hover:bg-primary-dark transition-colors disabled:opacity-50"
+            className="px-6 py-2 bg-primary text-primary-foreground rounded font-medium text-sm hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out disabled:opacity-50"
           >
             {status === "loading" && "..."}
             {status === "success" && <Check className="h-4 w-4" />}
