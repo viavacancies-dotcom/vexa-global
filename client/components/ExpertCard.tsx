@@ -81,14 +81,16 @@ export default function ExpertCard({
               View Profile <ArrowRight className="h-4 w-4" />
             </span>
             {email && (
-              <a
-                href={`mailto:${email}`}
-                onClick={(e) => e.stopPropagation()}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.location.href = `mailto:${email}`;
+                }}
                 className="p-2 text-muted-foreground hover:text-primary hover:bg-secondary rounded transition-colors"
                 aria-label={`Email ${name}`}
               >
                 <Mail className="h-4 w-4" />
-              </a>
+              </button>
             )}
           </div>
         </div>
