@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import PublicationCard from "@/components/PublicationCard";
 
 export default function Publications() {
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const publications = [
     {
       id: "p1",
