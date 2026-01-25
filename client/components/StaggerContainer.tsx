@@ -14,7 +14,13 @@ export default function StaggerContainer({
 
   return (
     <div ref={ref}>
-      <div className={`${className} ${isVisible ? "" : "opacity-0"}`}>
+      <div
+        className={`${className} transition-opacity duration-500`}
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
         {children}
       </div>
     </div>
