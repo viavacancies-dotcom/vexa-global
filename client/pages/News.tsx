@@ -154,9 +154,9 @@ export default function News() {
             <input
               type="email"
               placeholder="your@email.com"
-              className="flex-1 px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              className="flex-1 px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out"
             />
-            <button className="px-8 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition-colors">
+            <button className="px-8 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Subscribe
             </button>
           </div>
