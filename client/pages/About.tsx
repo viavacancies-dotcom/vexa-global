@@ -106,7 +106,11 @@ export default function About() {
             {features.map((feature, idx) => {
               const Icon = feature.icon;
               return (
-                <div key={idx} className="p-6 bg-background rounded-lg">
+                <div
+                  key={idx}
+                  className="p-6 rounded-lg select-none"
+                  style={{ backgroundColor: "hsl(0, 0%, 88%)" }}
+                >
                   <Icon className="h-8 w-8 text-primary mb-4" />
                   <h3 className="text-lg font-bold text-foreground mb-3">
                     {feature.title}
@@ -137,7 +141,8 @@ export default function About() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="p-6 bg-secondary rounded-lg text-center hover:shadow-md transition-all duration-200"
+                className="p-6 rounded-lg text-center hover:shadow-md transition-all duration-200 select-none"
+                style={{ backgroundColor: "hsl(0, 0%, 88%)" }}
               >
                 <p className="text-3xl font-bold text-primary mb-2">
                   {stat.number}
