@@ -103,3 +103,5 @@ function ResearchCard({
     </Link>
   );
 }
+
+export default memo(ResearchCard);
