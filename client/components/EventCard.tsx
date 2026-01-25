@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { memo } from "react";
 
 interface EventCardProps {
   id: string;
@@ -11,7 +12,7 @@ interface EventCardProps {
   image?: string;
 }
 
-export default function EventCard({
+function EventCard({
   id,
   title,
   date,
@@ -87,3 +88,5 @@ export default function EventCard({
     </Link>
   );
 }
+
+export default memo(EventCard);
