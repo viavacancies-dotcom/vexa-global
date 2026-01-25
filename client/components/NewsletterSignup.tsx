@@ -114,7 +114,7 @@ export default function NewsletterSignup({
           <button
             type="submit"
             disabled={status === "loading"}
-            className="px-8 py-3 bg-primary text-primary-foreground rounded font-medium hover:bg-primary-dark transition-colors disabled:opacity-50 whitespace-nowrap"
+            className="px-8 py-3 bg-primary text-primary-foreground rounded font-medium hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out disabled:opacity-50 whitespace-nowrap"
           >
             {status === "loading" && "Subscribing..."}
             {status === "success" && (
