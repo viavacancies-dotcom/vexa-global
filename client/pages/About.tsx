@@ -65,7 +65,7 @@ export default function About() {
               return (
                 <div
                   key={idx}
-                  className="p-6 rounded-lg hover:shadow-md transition-all duration-200 group select-none"
+                  className="p-6 rounded-lg group select-none"
                   style={{ backgroundColor: "#F0F8FF" }}
                 >
                   <div className="flex items-start gap-4">
