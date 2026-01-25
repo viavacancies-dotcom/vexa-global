@@ -44,11 +44,6 @@ export default function MainLayout() {
                 alt="Vexa Global"
                 className="h-10 sm:h-12 w-auto"
               />
-              <div className="hidden sm:block">
-                <h1 className="font-garet text-sm font-bold text-foreground">
-                  Vexa Global
-                </h1>
-              </div>
             </Link>
 
             {/* Desktop Navigation */}
