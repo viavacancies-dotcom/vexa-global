@@ -95,14 +95,8 @@ export default function Experts() {
 
           {/* Experts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {experts.map((expert, idx) => (
-              <div
-                key={expert.id}
-                className="animate-fade-in-up"
-                style={{
-                  animationDelay: `${idx * 0.1}s`,
-                }}
-              >
+            {experts.map((expert) => (
+              <div key={expert.id}>
                 <ExpertCard {...expert} />
               </div>
             ))}

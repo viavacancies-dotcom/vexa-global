@@ -89,32 +89,20 @@ export default function Events() {
               <TabsTrigger value="past">Past Events</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="upcoming" className="space-y-6 animate-fade-in-up">
+            <TabsContent value="upcoming" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {upcomingEvents.map((event, idx) => (
-                  <div
-                    key={event.id}
-                    className="animate-fade-in-up"
-                    style={{
-                      animationDelay: `${idx * 0.1}s`,
-                    }}
-                  >
+                {upcomingEvents.map((event) => (
+                  <div key={event.id}>
                     <EventCard {...event} />
                   </div>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="past" className="space-y-6 animate-fade-in-up">
+            <TabsContent value="past" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {pastEvents.map((event, idx) => (
-                  <div
-                    key={event.id}
-                    className="animate-fade-in-up"
-                    style={{
-                      animationDelay: `${idx * 0.1}s`,
-                    }}
-                  >
+                {pastEvents.map((event) => (
+                  <div key={event.id}>
                     <EventCard {...event} />
                   </div>
                 ))}
