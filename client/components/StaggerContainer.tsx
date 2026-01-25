@@ -13,11 +13,8 @@ export default function StaggerContainer({
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <div
-      ref={ref}
-      className={className}
-    >
-      <div className={isVisible ? "" : "opacity-0"}>
+    <div ref={ref}>
+      <div className={`${className} ${isVisible ? "" : "opacity-0"}`}>
         {children}
       </div>
     </div>
