@@ -91,7 +91,7 @@ export default function ResearchCard({
           {/* CTA */}
           <Link
             to={`/research/${id}`}
-            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-all duration-200 ease-in-out hover:gap-3"
           >
             Read More <ArrowRight className="h-4 w-4" />
           </Link>
