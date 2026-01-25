@@ -31,7 +31,7 @@ function PublicationCard({
   return (
     <Link
       to={`/publications/${id}`}
-      className="flex flex-col h-full border border-border rounded-lg p-6 bg-card card-hover group cursor-pointer no-underline"
+      className="flex flex-col h-full border border-border rounded-lg p-6 bg-card card-interactive group cursor-pointer no-underline"
       onClick={(e) => {
         // Only navigate if clicking on the main content area, not the action buttons
         if ((e.target as HTMLElement).closest('button')) {
