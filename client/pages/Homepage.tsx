@@ -253,7 +253,7 @@ export default function Homepage() {
       {/* Key Research Themes */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
               Research Themes
             </h2>
@@ -263,11 +263,13 @@ export default function Homepage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {researchThemes.map((theme) => (
-              <ThemeCard key={theme.id} {...theme} />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {researchThemes.map((theme, idx) => (
+              <StaggerItem key={theme.id} index={idx}>
+                <ThemeCard {...theme} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
