@@ -44,7 +44,7 @@ export default function MainLayout() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-smooth duration-200 relative group"
+                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary rounded-md transition-smooth duration-200 relative group"
                 >
                   {link.label}
                   <span className="nav-underline"></span>
