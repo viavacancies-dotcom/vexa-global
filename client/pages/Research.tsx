@@ -140,8 +140,16 @@ export default function Research() {
 
           {/* Results Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allResearch.map((research) => (
-              <ResearchCard key={research.id} {...research} />
+            {allResearch.map((research, idx) => (
+              <div
+                key={research.id}
+                className="animate-fade-in-up"
+                style={{
+                  animationDelay: `${idx * 0.1}s`,
+                }}
+              >
+                <ResearchCard {...research} />
+              </div>
             ))}
           </div>
 
