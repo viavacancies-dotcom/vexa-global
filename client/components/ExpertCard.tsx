@@ -24,7 +24,7 @@ function ExpertCard({
   return (
     <Link
       to={`/experts/${id}`}
-      className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer no-underline"
+      className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-interactive group cursor-pointer no-underline"
     >
       <article>
         {/* Profile Image or Placeholder */}
