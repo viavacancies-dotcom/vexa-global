@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import ExpertCard from "@/components/ExpertCard";
 
 export default function Experts() {
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const experts = [
     {
       id: "e1",
