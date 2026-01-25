@@ -235,13 +235,13 @@ export default function Homepage() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link
                 to="/research"
-                className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-smooth hover:shadow-lg hover:-translate-y-1 text-center duration-300"
+                className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary hover:shadow-lg hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out text-center"
               >
                 Explore Our Research
               </Link>
               <Link
                 to="/about"
-                className="inline-block px-8 py-4 bg-primary-foreground/20 text-white font-medium rounded hover:bg-primary-foreground/30 transition-smooth hover:shadow-lg hover:-translate-y-1 border border-white/30 text-center duration-300"
+                className="inline-block px-8 py-4 bg-primary-foreground/20 text-white font-medium rounded hover:bg-primary-foreground/30 hover:shadow-lg hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out border border-white/30 text-center"
               >
                 Learn More About Us
               </Link>
