@@ -146,7 +146,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/research?topic=geopolitics"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-smooth duration-200 inline-block group"
                   >
                     Geopolitics & Security
                   </Link>
