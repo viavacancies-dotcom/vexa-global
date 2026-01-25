@@ -13,50 +13,60 @@
   */
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 217 39% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 217 39% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 217 39% 16%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 58% 25%;
+    --primary-light: 210 61% 32%;
+    --primary-dark: 220 50% 18%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 32% 88%;
+    --secondary-foreground: 217 39% 16%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 21% 90%;
+    --muted-foreground: 217 14% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 46 93% 54%;
+    --accent-foreground: 217 39% 16%;
+
+    /* Theme-specific accent colors (subtle) */
+    --accent-geopolitics: 3 85% 49%;
+    --accent-relations: 217 80% 50%;
+    --accent-economics: 46 95% 50%;
+    --accent-technology: 258 100% 57%;
+    --accent-energy: 15 87% 45%;
+    --accent-regional: 174 59% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 31% 92%;
+    --input: 210 40% 96%;
+    --ring: 217 58% 25%;
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
 
     --sidebar-background: 0 0% 98%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 217 58% 25%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 210 32% 88%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 217 39% 16%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 210 31% 92%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217 80% 50%;
   }
 
   .dark {
