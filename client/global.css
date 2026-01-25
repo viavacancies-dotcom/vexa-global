@@ -319,15 +319,15 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Soft dropdown animation */
+  /* Soft dropdown animation - lightweight and quick */
   .dropdown-enter {
-    animation: dropdownEnter 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: dropdownEnter 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   @keyframes dropdownEnter {
     from {
       opacity: 0;
-      transform: translateY(-8px);
+      transform: translateY(-6px);
     }
     to {
       opacity: 1;
