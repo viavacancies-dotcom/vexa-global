@@ -89,7 +89,7 @@ export default function Research() {
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Section */}
-          <div className="mb-12 p-6 bg-secondary rounded-lg">
+          <div className="mb-12 p-6 bg-secondary rounded-lg animate-fade-in-up">
             <div className="flex items-center gap-3 mb-6">
               <Filter className="h-5 w-5 text-primary" />
               <h2 className="text-lg font-serif font-bold">Filter Results</h2>
