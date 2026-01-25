@@ -107,7 +107,7 @@ export default function NewsletterSignup({
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-background"
+              className="w-full px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary bg-background transition-all duration-200 ease-in-out"
               disabled={status === "loading"}
             />
           </div>
