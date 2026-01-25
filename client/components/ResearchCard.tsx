@@ -32,12 +32,12 @@ export default function ResearchCard({
   };
 
   const accentColorVar: Record<string, string> = {
-    geopolitics: "var(--accent-geopolitics)",
-    relations: "var(--accent-relations)",
-    economics: "var(--accent-economics)",
-    technology: "var(--accent-technology)",
-    energy: "var(--accent-energy)",
-    regional: "var(--accent-regional)",
+    geopolitics: "hsl(var(--accent-geopolitics))",
+    relations: "hsl(var(--accent-relations))",
+    economics: "hsl(var(--accent-economics))",
+    technology: "hsl(var(--accent-technology))",
+    energy: "hsl(var(--accent-energy))",
+    regional: "hsl(var(--accent-regional))",
   };
 
   return (
