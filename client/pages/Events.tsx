@@ -1,7 +1,12 @@
 import EventCard from "@/components/EventCard";
+import { useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Events() {
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const upcomingEvents = [
     {
       id: "ev1",
