@@ -21,7 +21,11 @@ export default function ExpertCard({
   email,
 }: ExpertCardProps) {
   return (
-    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer">
+    <Link
+      to={`/experts/${id}`}
+      className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer no-underline"
+    >
+      <article>
         {/* Profile Image or Placeholder */}
         <div className="h-48 bg-gradient-to-br from-primary-light to-primary flex items-center justify-center overflow-hidden">
           {image ? (
@@ -73,15 +77,13 @@ export default function ExpertCard({
 
           {/* Contact / CTA */}
           <div className="flex items-center justify-between border-t border-border pt-4">
-            <Link
-              to={`/experts/${id}`}
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-            >
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
               View Profile <ArrowRight className="h-4 w-4" />
-            </Link>
+            </span>
             {email && (
               <a
                 href={`mailto:${email}`}
+                onClick={(e) => e.stopPropagation()}
                 className="p-2 text-muted-foreground hover:text-primary hover:bg-secondary rounded transition-colors"
                 aria-label={`Email ${name}`}
               >
@@ -91,5 +93,6 @@ export default function ExpertCard({
           </div>
         </div>
       </article>
+    </Link>
   );
 }
