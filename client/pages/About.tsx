@@ -70,7 +70,7 @@ export default function About() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-primary/10">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
                     </div>
