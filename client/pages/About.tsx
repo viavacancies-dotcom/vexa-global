@@ -66,7 +66,7 @@ export default function About() {
                 <div
                   key={idx}
                   className="p-6 rounded-lg hover:shadow-md transition-all duration-200 group select-none"
-                  style={{ backgroundColor: "hsl(0, 0%, 88%)" }}
+                  style={{ backgroundColor: "#F0F8FF" }}
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
@@ -109,7 +109,7 @@ export default function About() {
                 <div
                   key={idx}
                   className="p-6 rounded-lg select-none"
-                  style={{ backgroundColor: "hsl(0, 0%, 88%)" }}
+                  style={{ backgroundColor: "#F0F8FF" }}
                 >
                   <Icon className="h-8 w-8 text-primary mb-4" />
                   <h3 className="text-lg font-bold text-foreground mb-3">
@@ -142,7 +142,7 @@ export default function About() {
               <div
                 key={idx}
                 className="p-6 rounded-lg text-center hover:shadow-md transition-all duration-200 select-none"
-                style={{ backgroundColor: "hsl(0, 0%, 88%)" }}
+                style={{ backgroundColor: "#F0F8FF" }}
               >
                 <p className="text-3xl font-bold text-primary mb-2">
                   {stat.number}
