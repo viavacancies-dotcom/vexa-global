@@ -158,28 +158,62 @@
 }
 
 @layer components {
-  /* Smooth transition utilities */
+  /* Smooth transition utilities with refined easing */
   .transition-smooth {
-    @apply transition-all duration-300 ease-out;
+    @apply transition-all duration-300;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Button transitions */
+  .transition-smooth-fast {
+    @apply transition-all duration-200;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-smooth-slow {
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Button transitions - soft and tactile */
   .btn-transition {
     @apply transition-smooth;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   }
 
   .btn-hover {
-    @apply hover:shadow-lg hover:-translate-y-0.5 transition-smooth;
+    @apply hover:shadow-md hover:scale-102 transition-smooth;
+    /* Scale 1.02 = 102% */
+  }
+
+  .btn-hover-elevated {
+    @apply hover:shadow-lg hover:scale-102 transition-smooth;
   }
 
   /* Link transitions */
   .link-transition {
-    @apply transition-colors duration-200 ease-out;
+    @apply transition-colors duration-200;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Card animations */
+  /* Card animations - gentle lift with soft shadows */
   .card-hover {
-    @apply hover:shadow-lg hover:border-primary transition-smooth;
+    @apply transition-smooth;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .card-interactive {
+    @apply transition-smooth cursor-pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-interactive:hover {
+    @apply -translate-y-2;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
   }
 
   /* Stagger animation delays */
@@ -214,5 +248,63 @@
 
   .fade-in-on-scroll.visible {
     @apply animate-fade-in;
+  }
+
+  /* Navigation link underline animation */
+  .nav-link {
+    @apply relative transition-colors duration-200;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-1 left-0 h-0.5 bg-primary;
+    width: 0%;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Form input focus states */
+  .input-smooth {
+    @apply transition-all duration-200;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+
+  .input-smooth:focus {
+    @apply ring-2 ring-primary ring-opacity-50;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Label transitions for forms */
+  .form-label {
+    @apply transition-all duration-200;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Soft dropdown animation */
+  .dropdown-enter {
+    animation: dropdownEnter 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes dropdownEnter {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Scale utility for hover effects */
+  .scale-102 {
+    --tw-scale-x: 1.02;
+    --tw-scale-y: 1.02;
+    transform: var(--tw-transform);
   }
 }
