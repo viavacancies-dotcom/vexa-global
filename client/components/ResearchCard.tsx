@@ -12,7 +12,7 @@ interface ResearchCardProps {
   image?: string;
 }
 
-export default function ResearchCard({
+function ResearchCard({
   id,
   title,
   abstract,
