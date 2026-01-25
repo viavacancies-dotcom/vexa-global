@@ -34,7 +34,8 @@ function ExpertCard({
               src={image}
               alt={name}
               loading="lazy"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              style={{ transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)' }}
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-white text-4xl font-serif font-bold">
