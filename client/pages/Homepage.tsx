@@ -296,7 +296,7 @@ export default function Homepage() {
           <div className="text-center">
             <Link
               to="/research"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out"
             >
               View All Research
             </Link>
@@ -327,7 +327,7 @@ export default function Homepage() {
           <div className="text-center">
             <Link
               to="/research"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out"
             >
               View All Analysis
             </Link>
@@ -358,7 +358,7 @@ export default function Homepage() {
           <div className="text-center">
             <Link
               to="/publications"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out"
             >
               View All Publications
             </Link>
@@ -389,7 +389,7 @@ export default function Homepage() {
           <div className="text-center">
             <Link
               to="/events"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out"
             >
               View All Events
             </Link>
