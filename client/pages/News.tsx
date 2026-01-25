@@ -77,16 +77,16 @@ export default function News() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Tabs */}
           <div className="mb-12 flex flex-wrap gap-4">
-            <button className="px-4 py-2 bg-primary text-white rounded font-medium hover:bg-primary-dark transition-colors">
+            <button className="px-4 py-2 bg-primary text-white rounded font-medium hover:bg-primary-dark hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               All News
             </button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary transition-colors">
+            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Press Releases
             </button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary transition-colors">
+            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               News
             </button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary transition-colors">
+            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Media
             </button>
           </div>
