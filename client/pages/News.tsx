@@ -66,7 +66,7 @@ export default function News() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-24">
+      <section className="bg-primary text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
             News & Media
@@ -78,7 +78,7 @@ export default function News() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Tabs */}
           <div className="mb-12 flex flex-wrap gap-4">
@@ -149,7 +149,7 @@ export default function News() {
       </section>
 
       {/* Subscribe Section */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-serif font-bold mb-4">Stay Updated</h2>
           <p className="text-muted-foreground mb-8">
