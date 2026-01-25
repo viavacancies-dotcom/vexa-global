@@ -132,9 +132,12 @@ export default function News() {
                   </div>
                 </div>
 
-                <button className="mt-4 text-primary font-medium hover:text-primary-dark transition-colors">
+                <Link
+                  to={`/news/${item.id}`}
+                  className="mt-4 inline-block text-primary font-medium hover:text-primary-dark transition-colors"
+                >
                   Read Full Article →
-                </button>
+                </Link>
               </article>
             ))}
           </div>
