@@ -32,7 +32,7 @@ export function StaggerItem({
   children,
   className = "",
   index = 0,
-  staggerDelay = 0.1,
+  staggerDelay = 0.08,
 }: StaggerItemProps) {
   // Memoize style object to prevent prop identity changes on parent re-renders
   const style = useMemo(
@@ -43,7 +43,10 @@ export function StaggerItem({
   return (
     <div
       className={`animate-fade-in-up ${className}`}
-      style={style}
+      style={{
+        ...style,
+        animationFillMode: 'both',
+      }}
     >
       {children}
     </div>
