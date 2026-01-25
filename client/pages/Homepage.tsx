@@ -338,7 +338,7 @@ export default function Homepage() {
       {/* Key Publications */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
               Featured Publications
             </h2>
@@ -347,11 +347,13 @@ export default function Homepage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {publications.map((pub) => (
-              <PublicationCard key={pub.id} {...pub} />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {publications.map((pub, idx) => (
+              <StaggerItem key={pub.id} index={idx}>
+                <PublicationCard {...pub} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           <div className="text-center">
             <Link
