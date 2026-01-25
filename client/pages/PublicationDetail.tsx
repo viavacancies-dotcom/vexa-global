@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, Users, Download, Share2 } from "lucide-react";
+import { Calendar, Users, Download, Share2 } from "lucide-react";
 import PublicationCard from "@/components/PublicationCard";
 
 export default function PublicationDetail() {
@@ -51,19 +51,6 @@ export default function PublicationDetail() {
 
   return (
     <div>
-      {/* Back Link */}
-      <div className="bg-secondary py-4 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            to="/publications"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Publications
-          </Link>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

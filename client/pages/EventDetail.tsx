@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, MapPin, Users, Clock } from "lucide-react";
+import { Calendar, MapPin, Users, Clock } from "lucide-react";
 import ExpertCard from "@/components/ExpertCard";
 
 export default function EventDetail() {
@@ -58,19 +58,6 @@ export default function EventDetail() {
 
   return (
     <div>
-      {/* Back Link */}
-      <div className="bg-secondary py-4 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            to="/events"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Events
-          </Link>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

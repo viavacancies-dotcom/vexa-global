@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Calendar, User, Share2 } from "lucide-react";
+import { Calendar, User, Share2 } from "lucide-react";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function ResearchDetail() {
@@ -66,19 +66,6 @@ export default function ResearchDetail() {
 
   return (
     <div>
-      {/* Back Link */}
-      <div className="bg-secondary py-4 border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link
-            to="/research"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to Research
-          </Link>
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
