@@ -222,26 +222,26 @@ export default function Homepage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light py-20 md:py-32 text-white">
+      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-light py-20 md:py-32 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight animate-fade-in-down">
               Understanding Our Complex World
             </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               Independent research and policy analysis for informed decision-making in a
               rapidly changing global landscape.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               <Link
                 to="/research"
-                className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-colors text-center"
+                className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-smooth hover:shadow-lg hover:-translate-y-1 text-center duration-300"
               >
                 Explore Our Research
               </Link>
               <Link
                 to="/about"
-                className="inline-block px-8 py-4 bg-primary-foreground/20 text-white font-medium rounded hover:bg-primary-foreground/30 transition-colors border border-white/30 text-center"
+                className="inline-block px-8 py-4 bg-primary-foreground/20 text-white font-medium rounded hover:bg-primary-foreground/30 transition-smooth hover:shadow-lg hover:-translate-y-1 border border-white/30 text-center duration-300"
               >
                 Learn More About Us
               </Link>
