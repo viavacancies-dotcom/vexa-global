@@ -154,7 +154,7 @@ export default {
         "scale-in": {
           from: {
             opacity: "0",
-            transform: "scale(0.92)",
+            transform: "scale(0.85)",
           },
           to: {
             opacity: "1",
@@ -164,11 +164,25 @@ export default {
         "scale-in-bounce": {
           "0%": {
             opacity: "0",
-            transform: "scale(0.88)",
+            transform: "scale(0.80)",
           },
           "60%": {
             opacity: "1",
-            transform: "scale(1.02)",
+            transform: "scale(1.05)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+        },
+        "pop-in": {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.75)",
+          },
+          "50%": {
+            opacity: "1",
+            transform: "scale(1.08)",
           },
           "100%": {
             opacity: "1",
