@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { LucideIcon, ArrowRight } from "lucide-react";
+import { memo } from "react";
 
 interface ThemeCardProps {
   id: string;
@@ -10,7 +11,7 @@ interface ThemeCardProps {
   count?: number;
 }
 
-export default function ThemeCard({
+function ThemeCard({
   id,
   title,
   description,
@@ -69,3 +70,5 @@ export default function ThemeCard({
     </Link>
   );
 }
+
+export default memo(ThemeCard);
