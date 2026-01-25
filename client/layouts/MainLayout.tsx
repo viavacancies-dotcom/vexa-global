@@ -82,12 +82,12 @@ export default function MainLayout() {
 
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
-            <nav className="md:hidden pb-4 space-y-1 animate-fade-in-down">
+            <nav className="md:hidden pb-4 grid grid-cols-2 gap-2 animate-fade-in-down">
               {navLinks.map((link, idx) => (
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="block px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-all duration-200 ease-in-out"
+                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-all duration-200 ease-in-out text-center"
                   onClick={() => setMobileMenuOpen(false)}
                   style={{
                     animation: `fadeInDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) ${idx * 0.05}s both`,
