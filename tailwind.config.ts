@@ -13,8 +13,9 @@ export default {
       },
     },
     fontFamily: {
-      serif: ["Lora", "Georgia", "serif"],
-      sans: ["Inter", "sans-serif"],
+      garet: ["Garet", "system-ui", "-apple-system", "sans-serif"],
+      serif: ["Garet", "system-ui", "-apple-system", "sans-serif"],
+      sans: ["Garet", "system-ui", "-apple-system", "sans-serif"],
     },
     extend: {
       colors: {
