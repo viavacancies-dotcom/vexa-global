@@ -102,28 +102,28 @@ export default function ResearchDetail() {
             {/* Main Content */}
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none mb-8">
-                <h2 className="text-3xl font-serif font-bold mb-4">{research.abstract}</h2>
-                <div className="text-muted-foreground leading-relaxed">
-                  <p className="mb-6">
+                <h2 className="text-3xl font-serif font-bold mb-4 text-foreground">{research.abstract}</h2>
+                <div className="text-foreground leading-relaxed">
+                  <p className="mb-6 text-foreground">
                     International trade has undergone unprecedented challenges in recent years. This research paper provides a detailed examination of the current landscape and future trajectories of global commerce.
                   </p>
 
-                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4">Key Findings</h3>
-                  <ul className="list-disc list-inside space-y-2 mb-6">
+                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4 text-foreground">Key Findings</h3>
+                  <ul className="list-disc list-inside space-y-2 mb-6 text-foreground">
                     <li>Supply chain diversification is becoming essential for economic resilience</li>
                     <li>Geopolitical tensions are reshaping bilateral trade relationships</li>
                     <li>Climate considerations are increasingly influencing trade policy</li>
                     <li>Regional integration may provide stability in uncertain times</li>
                   </ul>
 
-                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4">Methodology</h3>
-                  <p className="mb-6">
+                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4 text-foreground">Methodology</h3>
+                  <p className="mb-6 text-foreground">
                     This analysis is based on comprehensive data collection from international trade organizations, government sources, and academic research spanning the past five years.
                   </p>
 
-                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4">Recommendations</h3>
-                  <p className="mb-4">Policymakers should prioritize:</p>
-                  <ul className="list-disc list-inside space-y-2">
+                  <h3 className="text-2xl font-serif font-bold mt-8 mb-4 text-foreground">Recommendations</h3>
+                  <p className="mb-4 text-foreground">Policymakers should prioritize:</p>
+                  <ul className="list-disc list-inside space-y-2 text-foreground">
                     <li>Investment in supply chain resilience</li>
                     <li>Multilateral dialogue to reduce trade tensions</li>
                     <li>Integration of climate considerations in trade agreements</li>
