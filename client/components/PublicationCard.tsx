@@ -28,7 +28,7 @@ export default function PublicationCard({
   };
 
   return (
-    <article className="flex flex-col h-full border border-border rounded-lg p-6 bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
+    <article className="flex flex-col h-full border border-border rounded-lg p-6 bg-card card-hover group cursor-pointer">
       {/* Type Badge */}
       <div className="mb-4">
         <span
