@@ -1,7 +1,12 @@
 import { Filter } from "lucide-react";
+import { useEffect } from "react";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function Research() {
+  useEffect(() => {
+    // Scroll to top on page load
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const allResearch = [
     {
       id: "1",
