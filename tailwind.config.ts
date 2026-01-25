@@ -104,7 +104,7 @@ export default {
         "fade-in-up": {
           from: {
             opacity: "0",
-            transform: "translateY(12px)",
+            transform: "translateY(24px)",
           },
           to: {
             opacity: "1",
@@ -114,7 +114,7 @@ export default {
         "fade-in-up-subtle": {
           from: {
             opacity: "0",
-            transform: "translateY(6px)",
+            transform: "translateY(8px)",
           },
           to: {
             opacity: "1",
