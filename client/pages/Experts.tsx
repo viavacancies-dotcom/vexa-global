@@ -75,9 +75,9 @@ export default function Experts() {
               <input
                 type="text"
                 placeholder="Search experts..."
-                className="flex-1 px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                className="flex-1 px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out"
               />
-              <select className="px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+              <select className="px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
                 <option>All Expertise Areas</option>
                 <option>Economics</option>
                 <option>Technology</option>
