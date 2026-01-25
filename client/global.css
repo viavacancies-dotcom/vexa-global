@@ -186,19 +186,28 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Button transitions - soft and tactile */
+  /* Button transitions - calm and tactile without aggressive jumps */
   .btn-transition {
-    @apply transition-smooth;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    @apply transition-smooth-fast;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   .btn-hover {
-    @apply hover:shadow-md hover:scale-102 transition-smooth;
-    /* Scale 1.02 = 102% */
+    @apply transition-smooth-fast;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-hover:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 
   .btn-hover-elevated {
-    @apply hover:shadow-lg hover:scale-102 transition-smooth;
+    @apply transition-smooth-fast;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-hover-elevated:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
 
   /* Link transitions */
@@ -207,25 +216,25 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Card animations - gentle lift with soft shadows */
+  /* Card animations - gentle lift with soft shadow progression */
   .card-hover {
-    @apply transition-smooth;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    @apply transition-smooth cursor-pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   .card-hover:hover {
-    @apply -translate-y-1;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    @apply -translate-y-0.5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   }
 
   .card-interactive {
     @apply transition-smooth cursor-pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
   .card-interactive:hover {
-    @apply -translate-y-2;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    @apply -translate-y-1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   /* Stagger animation delays */
