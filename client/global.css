@@ -239,27 +239,27 @@
   /* Card animations - modern with smooth elevation and depth */
   .card-hover {
     @apply transition-smooth cursor-pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
   }
 
   .card-hover:hover {
-    @apply -translate-y-1;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    @apply -translate-y-2;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
   }
 
   .card-interactive {
     @apply transition-smooth cursor-pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   }
 
   .card-interactive:hover {
-    @apply -translate-y-2;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+    @apply -translate-y-3;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.22);
   }
 
   .card-interactive:active {
     @apply -translate-y-1;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
   }
 
   /* Enhanced stagger animation delays with more pronounced timing */
