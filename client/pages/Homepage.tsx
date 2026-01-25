@@ -369,7 +369,7 @@ export default function Homepage() {
       {/* Events Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">
               Upcoming Events
             </h2>
@@ -378,11 +378,13 @@ export default function Homepage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {upcomingEvents.map((event) => (
-              <EventCard key={event.id} {...event} />
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {upcomingEvents.map((event, idx) => (
+              <StaggerItem key={event.id} index={idx}>
+                <EventCard {...event} />
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           <div className="text-center">
             <Link
