@@ -154,7 +154,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/research?topic=technology"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     Technology & AI
                   </Link>
@@ -162,7 +162,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/research?topic=energy"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     Energy & Climate
                   </Link>
@@ -170,7 +170,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/research"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     All Research
                   </Link>
@@ -185,7 +185,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/publications"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     Publications
                   </Link>
@@ -193,7 +193,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/experts"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     Our Experts
                   </Link>
@@ -201,7 +201,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/events"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     Events
                   </Link>
@@ -209,7 +209,7 @@ export default function MainLayout() {
                 <li>
                   <Link
                     to="/news"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     News & Press
                   </Link>
@@ -228,7 +228,7 @@ export default function MainLayout() {
                 <li>
                   <a
                     href="mailto:contact@globalinstitute.org"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     contact@globalinstitute.org
                   </a>
@@ -236,7 +236,7 @@ export default function MainLayout() {
                 <li>
                   <a
                     href="tel:+41223334444"
-                    className="hover:text-primary transition-colors"
+                    className="hover:text-primary transition-colors duration-200 ease-in-out"
                   >
                     +41 22 333 4444
                   </a>
@@ -251,10 +251,10 @@ export default function MainLayout() {
                 &copy; 2024 Global Institute. All rights reserved.
               </p>
               <div className="flex gap-6">
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-primary transition-colors duration-200 ease-in-out">
                   Privacy Policy
                 </a>
-                <a href="#" className="hover:text-primary transition-colors">
+                <a href="#" className="hover:text-primary transition-colors duration-200 ease-in-out">
                   Terms of Use
                 </a>
               </div>
