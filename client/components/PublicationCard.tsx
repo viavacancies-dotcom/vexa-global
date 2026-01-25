@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Download, Share2, Calendar, Users } from "lucide-react";
+import { memo } from "react";
 
 interface PublicationCardProps {
   id: string;
@@ -11,7 +12,7 @@ interface PublicationCardProps {
   downloadLink?: string;
 }
 
-export default function PublicationCard({
+function PublicationCard({
   id,
   title,
   type,
@@ -104,3 +105,5 @@ export default function PublicationCard({
     </Link>
   );
 }
+
+export default memo(PublicationCard);
