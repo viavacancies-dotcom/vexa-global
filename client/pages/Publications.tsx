@@ -103,7 +103,7 @@ export default function Publications() {
 
           {/* Load More */}
           <div className="mt-12 text-center">
-            <button className="px-8 py-3 border border-primary text-primary rounded font-medium hover:bg-primary hover:text-white transition-colors">
+            <button className="px-8 py-3 border border-primary text-primary rounded font-medium hover:bg-primary hover:text-white hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Load More Publications
             </button>
           </div>
