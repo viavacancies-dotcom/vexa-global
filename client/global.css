@@ -258,13 +258,25 @@
 
   .nav-link::after {
     content: '';
-    @apply absolute bottom-1 left-0 h-0.5 bg-primary;
-    width: 0%;
+    @apply absolute bottom-1 h-0.5 bg-primary;
+    left: 0.5mm;
+    width: 0;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .nav-link:hover::after {
-    width: 100%;
+    width: calc(100% - 1mm);
+  }
+
+  /* Navigation link underline with group hover */
+  .group .nav-underline {
+    @apply absolute bottom-1 h-0.5 bg-primary transition-all duration-300;
+    left: 0.5mm;
+    width: 0;
+  }
+
+  .group:hover .nav-underline {
+    width: calc(100% - 1mm);
   }
 
   /* Form input focus states */
