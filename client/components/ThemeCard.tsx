@@ -36,11 +36,11 @@ function ThemeCard({
       <article>
         {/* Icon */}
         <div
-          className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all"
+          className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
           style={{ backgroundColor: accentColorVar[theme] + "20" }}
         >
           <Icon
-            className="h-6 w-6"
+            className="h-6 w-6 transition-transform duration-300 group-hover:scale-110"
             style={{ color: accentColorVar[theme] }}
           />
         </div>
