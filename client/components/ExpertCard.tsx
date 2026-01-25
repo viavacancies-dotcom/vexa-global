@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Briefcase, ArrowRight } from "lucide-react";
+import { memo } from "react";
 
 interface ExpertCardProps {
   id: string;
@@ -11,7 +12,7 @@ interface ExpertCardProps {
   email?: string;
 }
 
-export default function ExpertCard({
+function ExpertCard({
   id,
   name,
   role,
@@ -98,3 +99,5 @@ export default function ExpertCard({
     </Link>
   );
 }
+
+export default memo(ExpertCard);
