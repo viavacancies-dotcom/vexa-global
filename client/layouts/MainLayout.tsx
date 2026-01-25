@@ -35,8 +35,8 @@ export default function MainLayout() {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50 transition-all duration-300">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8" style={{ maxWidth: "1344px" }}>
-          <div className="flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between" style={{ height: "67.2px" }}>
             {/* Logo / Institute Name */}
             <Link to="/" className="flex items-center gap-2">
               <img
