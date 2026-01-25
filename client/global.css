@@ -156,3 +156,63 @@
     white-space: pre;
   }
 }
+
+@layer components {
+  /* Smooth transition utilities */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  /* Button transitions */
+  .btn-transition {
+    @apply transition-smooth;
+  }
+
+  .btn-hover {
+    @apply hover:shadow-lg hover:-translate-y-0.5 transition-smooth;
+  }
+
+  /* Link transitions */
+  .link-transition {
+    @apply transition-colors duration-200 ease-out;
+  }
+
+  /* Card animations */
+  .card-hover {
+    @apply hover:shadow-lg hover:border-primary transition-smooth;
+  }
+
+  /* Stagger animation delays */
+  .stagger-1 {
+    animation-delay: 0.05s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.15s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-5 {
+    animation-delay: 0.25s;
+  }
+
+  .stagger-6 {
+    animation-delay: 0.3s;
+  }
+
+  /* Fade in on scroll */
+  .fade-in-on-scroll {
+    @apply opacity-0;
+  }
+
+  .fade-in-on-scroll.visible {
+    @apply animate-fade-in;
+  }
+}
