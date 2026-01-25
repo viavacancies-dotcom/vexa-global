@@ -1,10 +1,15 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Mail, Briefcase, BookOpen } from "lucide-react";
 import PublicationCard from "@/components/PublicationCard";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function ExpertDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   // Mock data - in a real app, fetch based on ID
   const expert = {

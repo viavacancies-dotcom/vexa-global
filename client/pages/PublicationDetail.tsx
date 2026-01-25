@@ -1,9 +1,14 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Calendar, Users, Download, Share2 } from "lucide-react";
 import PublicationCard from "@/components/PublicationCard";
 
 export default function PublicationDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   // Mock data - in a real app, fetch based on ID
   const publication = {

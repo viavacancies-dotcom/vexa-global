@@ -1,9 +1,14 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Calendar, User, Share2 } from "lucide-react";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function ResearchDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   // Mock data - in a real app, fetch based on ID
   const research = {

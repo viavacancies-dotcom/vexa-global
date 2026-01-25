@@ -1,9 +1,14 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Calendar, MapPin, Users, Clock } from "lucide-react";
 import ExpertCard from "@/components/ExpertCard";
 
 export default function EventDetail() {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   // Mock data - in a real app, fetch based on ID
   const event = {
