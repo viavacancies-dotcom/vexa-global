@@ -152,8 +152,8 @@ export default function ResearchDetail() {
 
               {/* Author Info */}
               <div className="bg-secondary rounded-lg p-6">
-                <h3 className="font-serif font-bold text-lg mb-4">About the Author</h3>
-                <p className="text-sm text-muted-foreground mb-4">
+                <h3 className="font-serif font-bold text-lg mb-4 text-foreground">About the Author</h3>
+                <p className="text-sm text-foreground mb-4">
                   Dr. Elena Rossi is Director of Research at Global Institute, specializing in international economics and trade policy with 20+ years of experience.
                 </p>
                 <Link
