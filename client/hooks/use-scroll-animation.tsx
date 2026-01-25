@@ -21,6 +21,17 @@ export function useScrollAnimation() {
 
     if (ref.current) {
       observer.observe(ref.current);
+
+      // Check if element is already in viewport on mount
+      const rect = ref.current.getBoundingClientRect();
+      const isInitiallyVisible =
+        rect.top < window.innerHeight &&
+        rect.bottom > 0;
+
+      if (isInitiallyVisible) {
+        setIsVisible(true);
+        observer.unobserve(ref.current);
+      }
     }
 
     return () => {
