@@ -114,7 +114,7 @@ export default function Events() {
           </Tabs>
 
           {/* Event Archive Note */}
-          <div className="mt-12 bg-secondary rounded-lg p-8 text-center">
+          <div className="mt-8 bg-secondary rounded-lg p-6 text-center">
             <h3 className="text-xl font-serif font-bold mb-2">Event Archive</h3>
             <p className="text-muted-foreground">
               For a complete archive of past events, photos, and recordings, visit our event
