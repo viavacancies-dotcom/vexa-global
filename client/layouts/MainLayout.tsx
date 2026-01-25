@@ -44,9 +44,10 @@ export default function MainLayout() {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                  className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-smooth duration-200 relative group"
                 >
                   {link.label}
+                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
                 </Link>
               ))}
             </nav>
