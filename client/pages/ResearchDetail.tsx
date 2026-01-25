@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { Calendar, User, Share2 } from "lucide-react";
+import { Calendar, User, Share2, Check } from "lucide-react";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function ResearchDetail() {
