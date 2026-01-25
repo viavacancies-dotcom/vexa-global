@@ -12,6 +12,10 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      serif: ["Lora", "Georgia", "serif"],
+      sans: ["Inter", "sans-serif"],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -22,10 +26,22 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          geopolitics: "hsl(var(--accent-geopolitics))",
+          relations: "hsl(var(--accent-relations))",
+          economics: "hsl(var(--accent-economics))",
+          technology: "hsl(var(--accent-technology))",
+          energy: "hsl(var(--accent-energy))",
+          regional: "hsl(var(--accent-regional))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -34,10 +50,6 @@ export default {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
