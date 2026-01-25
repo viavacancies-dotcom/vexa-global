@@ -1,4 +1,5 @@
 import { Users, Target, Globe, BookOpen, Lightbulb, Award } from "lucide-react";
+import { Users, Target, Globe, BookOpen, Lightbulb, Award } from "lucide-react";
 import { useEffect } from "react";
 
 export default function About() {
