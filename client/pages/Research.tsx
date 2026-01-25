@@ -1,8 +1,10 @@
-import { Filter } from "lucide-react";
-import { useEffect } from "react";
+import { Filter, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 import ResearchCard from "@/components/ResearchCard";
 
 export default function Research() {
+  const [filtersOpen, setFiltersOpen] = useState(false);
+
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
