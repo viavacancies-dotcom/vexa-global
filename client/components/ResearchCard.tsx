@@ -67,7 +67,7 @@ export default function ResearchCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-lg font-serif font-bold mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
+          <h3 className="text-lg font-serif font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-200 ease-in-out line-clamp-2">
             {title}
           </h3>
 
