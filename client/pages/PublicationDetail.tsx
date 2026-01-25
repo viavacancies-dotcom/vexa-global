@@ -57,7 +57,7 @@ export default function PublicationDetail() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-24">
+      <section className="bg-primary text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
             <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-blue-100 text-blue-800">
@@ -81,7 +81,7 @@ export default function PublicationDetail() {
       </section>
 
       {/* Content */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Content */}
@@ -152,7 +152,7 @@ export default function PublicationDetail() {
       </section>
 
       {/* Related Publications */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-12 md:py-16 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-4xl font-serif font-bold text-foreground mb-4">
