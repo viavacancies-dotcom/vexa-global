@@ -41,7 +41,7 @@ export default function ResearchCard({
   };
 
   return (
-    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
+    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-hover group cursor-pointer">
         {/* Image or Color Accent */}
         {image ? (
           <div className="h-40 bg-muted overflow-hidden">
