@@ -75,7 +75,7 @@ export default function Experts() {
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Search and Filter */}
-          <div className="mb-12">
+          <div className="mb-12 animate-fade-in-up">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <input
                 type="text"
