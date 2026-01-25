@@ -63,7 +63,7 @@ export default function Experts() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-24">
+      <section className="bg-primary text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
             Our Experts
@@ -75,7 +75,7 @@ export default function Experts() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-12 md:py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Experts Grid */}
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
