@@ -29,7 +29,7 @@ export default function ThemeCard({
 
   return (
     <Link to={`/research?topic=${id}`}>
-      <article className="group flex flex-col h-full border border-border rounded-lg p-6 hover:shadow-lg transition-all bg-card hover:border-primary">
+      <article className="group flex flex-col h-full border border-border rounded-lg p-6 bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 cursor-pointer">
         {/* Icon */}
         <div
           className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all"
