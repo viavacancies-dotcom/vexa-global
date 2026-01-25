@@ -180,18 +180,18 @@ export default function Research() {
           </div>
 
           {/* Pagination */}
-          <div className="mt-12 flex justify-center items-center gap-2 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
+          <div className="mt-16 flex justify-center items-center gap-3 animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+            <button className="px-4 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               Previous
             </button>
-            <button className="px-4 py-2 bg-primary text-white rounded hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">1</button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
+            <button className="px-3 py-2.5 bg-primary text-white rounded-lg text-sm font-garet font-medium hover:bg-primary-light transition-all duration-200 ease-in-out shadow-sm">1</button>
+            <button className="px-3 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               2
             </button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
+            <button className="px-3 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               3
             </button>
-            <button className="px-4 py-2 border border-border rounded hover:bg-secondary hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
+            <button className="px-4 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               Next
             </button>
           </div>
