@@ -1,7 +1,11 @@
 import { Mail, Phone, MapPin, Globe, Users } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

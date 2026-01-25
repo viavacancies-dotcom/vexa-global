@@ -1,6 +1,11 @@
 import { Calendar, User } from "lucide-react";
+import { useEffect } from "react";
 
 export default function News() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const newsItems = [
     {
       id: "n1",
