@@ -170,23 +170,33 @@
 }
 
 @layer components {
-  /* Smooth transition utilities with refined easing */
+  /* Modern transition utilities with spring-like easing */
   .transition-smooth {
     @apply transition-all duration-300;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .transition-smooth-fast {
     @apply transition-all duration-200;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  .transition-smooth-slow {
+  .transition-smooth-slower {
     @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .transition-smooth-bounce {
+    @apply transition-all duration-400;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .transition-standard {
+    @apply transition-all duration-300;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Button transitions - calm and tactile without aggressive jumps */
+  /* Button transitions - modern with elevated feedback */
   .btn-transition {
     @apply transition-smooth-fast;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -198,7 +208,8 @@
   }
 
   .btn-hover:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    @apply -translate-y-0.5;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
   }
 
   .btn-hover-elevated {
@@ -207,59 +218,81 @@
   }
 
   .btn-hover-elevated:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    @apply -translate-y-1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   }
 
-  /* Link transitions */
+  .btn-hover-elevated:active {
+    @apply -translate-y-0.5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Link transitions with enhanced feedback */
   .link-transition {
-    @apply transition-colors duration-200;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply transition-smooth duration-200;
   }
 
-  /* Card animations - gentle lift with soft shadow progression */
+  .link-transition:hover {
+    @apply text-primary;
+  }
+
+  /* Card animations - modern with smooth elevation and depth */
   .card-hover {
     @apply transition-smooth cursor-pointer;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   }
 
   .card-hover:hover {
-    @apply -translate-y-0.5;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    @apply -translate-y-1;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
 
   .card-interactive {
     @apply transition-smooth cursor-pointer;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   }
 
   .card-interactive:hover {
-    @apply -translate-y-1;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    @apply -translate-y-2;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
   }
 
-  /* Stagger animation delays - lightweight timing */
+  .card-interactive:active {
+    @apply -translate-y-1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Enhanced stagger animation delays with more pronounced timing */
   .stagger-1 {
-    animation-delay: 0.04s;
+    animation-delay: 0.05s;
   }
 
   .stagger-2 {
-    animation-delay: 0.08s;
+    animation-delay: 0.1s;
   }
 
   .stagger-3 {
-    animation-delay: 0.12s;
+    animation-delay: 0.15s;
   }
 
   .stagger-4 {
-    animation-delay: 0.16s;
-  }
-
-  .stagger-5 {
     animation-delay: 0.2s;
   }
 
+  .stagger-5 {
+    animation-delay: 0.25s;
+  }
+
   .stagger-6 {
-    animation-delay: 0.24s;
+    animation-delay: 0.3s;
+  }
+
+  .stagger-7 {
+    animation-delay: 0.35s;
+  }
+
+  .stagger-8 {
+    animation-delay: 0.4s;
   }
 
   /* Fade in on scroll */
@@ -271,10 +304,10 @@
     @apply animate-fade-in;
   }
 
-  /* Navigation link underline animation */
+  /* Enhanced navigation link underline animation */
   .nav-link {
-    @apply relative transition-colors duration-200;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply relative transition-colors duration-300;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .nav-link::after {
@@ -282,7 +315,7 @@
     @apply absolute bottom-1 h-0.5 bg-primary;
     left: 0.5mm;
     width: 0;
-    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .nav-link:hover::after {
@@ -291,43 +324,43 @@
 
   /* Navigation link underline with group hover */
   .group .nav-underline {
-    @apply absolute bottom-1 h-0.5 bg-primary transition-all duration-200;
+    @apply absolute bottom-1 h-0.5 bg-primary transition-all duration-300;
     left: 0.5mm;
     width: 0;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   .group:hover .nav-underline {
     width: calc(100% - 1mm);
   }
 
-  /* Form input focus states - calm and consistent */
+  /* Form input focus states - smooth and elegant */
   .input-smooth {
-    @apply transition-all duration-200;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply transition-all duration-300;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
   }
 
   .input-smooth:focus {
-    @apply ring-1 ring-primary ring-opacity-75;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+    @apply ring-2 ring-primary ring-opacity-60;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03), 0 0 0 3px rgba(var(--primary), 0.1);
   }
 
   /* Label transitions for forms */
   .form-label {
-    @apply transition-colors duration-200;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply transition-colors duration-300;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
-  /* Soft dropdown animation - lightweight and quick */
+  /* Enhanced dropdown animation */
   .dropdown-enter {
-    animation: dropdownEnter 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: dropdownEnter 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
   @keyframes dropdownEnter {
     from {
       opacity: 0;
-      transform: translateY(-6px);
+      transform: translateY(-8px);
     }
     to {
       opacity: 1;
@@ -335,10 +368,56 @@
     }
   }
 
-  /* Scale utility for hover effects */
+  /* Scale utilities for hover effects */
   .scale-102 {
     --tw-scale-x: 1.02;
     --tw-scale-y: 1.02;
     transform: var(--tw-transform);
+  }
+
+  .scale-105 {
+    --tw-scale-x: 1.05;
+    --tw-scale-y: 1.05;
+    transform: var(--tw-transform);
+  }
+
+  /* Enhanced opacity transitions */
+  .opacity-transition {
+    @apply transition-opacity duration-300;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Transform transitions */
+  .transform-transition {
+    @apply transition-transform duration-300;
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Smooth page transitions */
+  .page-enter {
+    animation: pageEnter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes pageEnter {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth color transitions */
+  .color-transition {
+    @apply transition-colors duration-300;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Pulse effect with smooth easing */
+  .pulse-smooth {
+    @apply animate-pulse;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   }
 }
