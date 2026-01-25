@@ -42,7 +42,7 @@ export default function ResearchCard({
 
   return (
     <Link to={`/research/${id}`}>
-      <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow bg-card">
+      <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
         {/* Image or Color Accent */}
         {image ? (
           <div className="h-40 bg-muted overflow-hidden">
