@@ -1,67 +1,70 @@
 import { useEffect } from "react";
 import PublicationCard from "@/components/PublicationCard";
+import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
+
+// Static data - extracted to module level to prevent recreation on every render
+const PUBLICATIONS_DATA = [
+  {
+    id: "p1",
+    title: "Global Security Report 2024",
+    type: "Report" as const,
+    authors: ["Dr. Elena Rossi", "Prof. James Mitchell"],
+    date: "March 2024",
+    abstract:
+      "Annual comprehensive assessment of global security threats, trends, and institutional responses.",
+  },
+  {
+    id: "p2",
+    title: "Climate Policy Brief: Evaluating Carbon Markets",
+    type: "Brief" as const,
+    authors: ["Dr. Amara Okafor"],
+    date: "February 2024",
+    abstract:
+      "Policy recommendations for enhancing effectiveness and equity in international carbon trading.",
+  },
+  {
+    id: "p3",
+    title: "The Digital Divide in International Development",
+    type: "Article" as const,
+    authors: ["Dr. Yuki Tanaka"],
+    date: "January 2024",
+    abstract:
+      "Infrastructure, policy, and investment strategies for bridging digital access gaps.",
+  },
+  {
+    id: "p4",
+    title: "Working Paper: Supply Chain Resilience",
+    type: "Paper" as const,
+    authors: ["Prof. Michael Zhang"],
+    date: "December 2023",
+    abstract:
+      "Analysis of supply chain vulnerabilities and strategies for building resilience.",
+  },
+  {
+    id: "p5",
+    title: "Policy Brief: Education and Economic Development",
+    type: "Brief" as const,
+    authors: ["Dr. Sarah Johnson"],
+    date: "November 2023",
+    abstract:
+      "The role of education in driving sustainable economic development in emerging markets.",
+  },
+  {
+    id: "p6",
+    title: "Annual Report: Global Governance Trends",
+    type: "Report" as const,
+    authors: ["Dr. Marcus Weber"],
+    date: "October 2023",
+    abstract:
+      "Review of institutional changes and governance challenges across international organizations.",
+  },
+];
 
 export default function Publications() {
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  const publications = [
-    {
-      id: "p1",
-      title: "Global Security Report 2024",
-      type: "Report" as const,
-      authors: ["Dr. Elena Rossi", "Prof. James Mitchell"],
-      date: "March 2024",
-      abstract:
-        "Annual comprehensive assessment of global security threats, trends, and institutional responses.",
-    },
-    {
-      id: "p2",
-      title: "Climate Policy Brief: Evaluating Carbon Markets",
-      type: "Brief" as const,
-      authors: ["Dr. Amara Okafor"],
-      date: "February 2024",
-      abstract:
-        "Policy recommendations for enhancing effectiveness and equity in international carbon trading.",
-    },
-    {
-      id: "p3",
-      title: "The Digital Divide in International Development",
-      type: "Article" as const,
-      authors: ["Dr. Yuki Tanaka"],
-      date: "January 2024",
-      abstract:
-        "Infrastructure, policy, and investment strategies for bridging digital access gaps.",
-    },
-    {
-      id: "p4",
-      title: "Working Paper: Supply Chain Resilience",
-      type: "Paper" as const,
-      authors: ["Prof. Michael Zhang"],
-      date: "December 2023",
-      abstract:
-        "Analysis of supply chain vulnerabilities and strategies for building resilience.",
-    },
-    {
-      id: "p5",
-      title: "Policy Brief: Education and Economic Development",
-      type: "Brief" as const,
-      authors: ["Dr. Sarah Johnson"],
-      date: "November 2023",
-      abstract:
-        "The role of education in driving sustainable economic development in emerging markets.",
-    },
-    {
-      id: "p6",
-      title: "Annual Report: Global Governance Trends",
-      type: "Report" as const,
-      authors: ["Dr. Marcus Weber"],
-      date: "October 2023",
-      abstract:
-        "Review of institutional changes and governance challenges across international organizations.",
-    },
-  ];
 
   return (
     <div>
@@ -100,22 +103,16 @@ export default function Publications() {
           </div>
 
           {/* Publications Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {publications.map((pub, idx) => (
-              <div
-                key={pub.id}
-                className="animate-fade-in-up"
-                style={{
-                  animationDelay: `${idx * 0.1}s`,
-                }}
-              >
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {PUBLICATIONS_DATA.map((pub, idx) => (
+              <StaggerItem key={pub.id} index={idx}>
                 <PublicationCard {...pub} />
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Load More */}
-          <div className="mt-12 text-center animate-fade-in-up" style={{animationDelay: '0.6s'}}>
+          <div className="mt-12 text-center animate-fade-in-up">
             <button className="px-8 py-3 border border-primary text-primary rounded font-medium hover:bg-primary hover:text-white hover:shadow-md hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out">
               Load More Publications
             </button>
