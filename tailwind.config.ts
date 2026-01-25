@@ -104,7 +104,7 @@ export default {
         "fade-in-up": {
           from: {
             opacity: "0",
-            transform: "translateY(10px)",
+            transform: "translateY(8px)",
           },
           to: {
             opacity: "1",
@@ -114,7 +114,7 @@ export default {
         "fade-in-down": {
           from: {
             opacity: "0",
-            transform: "translateY(-10px)",
+            transform: "translateY(-8px)",
           },
           to: {
             opacity: "1",
@@ -124,7 +124,7 @@ export default {
         "fade-in-left": {
           from: {
             opacity: "0",
-            transform: "translateX(-8px)",
+            transform: "translateX(-6px)",
           },
           to: {
             opacity: "1",
@@ -134,7 +134,7 @@ export default {
         "fade-in-right": {
           from: {
             opacity: "0",
-            transform: "translateX(8px)",
+            transform: "translateX(6px)",
           },
           to: {
             opacity: "1",
@@ -154,7 +154,7 @@ export default {
         "slide-in-left": {
           from: {
             opacity: "0",
-            transform: "translateX(-20px)",
+            transform: "translateX(-12px)",
           },
           to: {
             opacity: "1",
@@ -164,11 +164,19 @@ export default {
         "slide-in-right": {
           from: {
             opacity: "0",
-            transform: "translateX(20px)",
+            transform: "translateX(12px)",
           },
           to: {
             opacity: "1",
             transform: "translateX(0)",
+          },
+        },
+        "caret-blink": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
           },
         },
       },
@@ -183,6 +191,7 @@ export default {
         "scale-in": "scale-in 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         "slide-in-left": "slide-in-left 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
         "slide-in-right": "slide-in-right 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+        "caret-blink": "caret-blink 1s steps(1, end) infinite",
       },
       scale: {
         102: "1.02",
