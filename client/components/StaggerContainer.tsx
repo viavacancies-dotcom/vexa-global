@@ -22,7 +22,9 @@ export default function StaggerContainer({
         "--stagger-delay": `${staggerDelay}s`,
       } as React.CSSProperties}
     >
-      {isVisible && children}
+      <div className={isVisible ? "" : "opacity-0"}>
+        {children}
+      </div>
     </div>
   );
 }
