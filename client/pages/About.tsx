@@ -141,7 +141,7 @@ export default function About() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-lg text-center hover:shadow-md transition-all duration-200 select-none"
+                className="p-6 rounded-lg text-center select-none"
                 style={{ backgroundColor: "#F0F8FF" }}
               >
                 <p className="text-3xl font-bold text-primary mb-2">
