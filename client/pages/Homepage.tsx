@@ -450,7 +450,7 @@ export default function Homepage() {
           </p>
           <Link
             to="/contact"
-            className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-smooth hover:shadow-lg hover:-translate-y-1 duration-300 animate-fade-in-up"
+            className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary hover:shadow-lg hover:scale-102 active:scale-100 transition-all duration-200 ease-in-out animate-fade-in-up"
             style={{ animationDelay: "0.4s" }}
           >
             Get in Touch
