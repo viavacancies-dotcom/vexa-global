@@ -86,7 +86,7 @@ export default function Research() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Section */}
           <div className="mb-12 p-6 bg-secondary rounded-lg animate-fade-in-up">
