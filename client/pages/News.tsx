@@ -1,5 +1,6 @@
 import { Calendar, User } from "lucide-react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function News() {
   useEffect(() => {
