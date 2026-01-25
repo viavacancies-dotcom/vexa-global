@@ -47,7 +47,7 @@ export default function MainLayout() {
                   className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-secondary rounded-md transition-smooth duration-200 relative group"
                 >
                   {link.label}
-                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 ease-in-out"></span>
+                  <span className="absolute bottom-1 h-0.5 bg-primary transition-all duration-300 ease-in-out" style={{left: '0.5mm', right: 'auto', width: 0}} onMouseEnter={(e) => {e.currentTarget.style.width = 'calc(100% - 1mm)'; e.currentTarget.style.left = '0.5mm'}} onMouseLeave={(e) => {e.currentTarget.style.width = '0'; e.currentTarget.style.left = '0.5mm'}}></span>
                 </Link>
               ))}
             </nav>
