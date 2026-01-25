@@ -140,9 +140,7 @@ export default function ResearchDetail() {
                 <h3 className="font-serif font-bold text-lg mb-4">Get This Research</h3>
                 <div className="space-y-3">
                   <button className="w-full px-4 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition-colors flex items-center justify-center gap-2">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19v-7m0 0V5m0 7H5m7 0h7" />
-                    </svg>
+                    <Check className="h-4 w-4" />
                     Download PDF
                   </button>
                   <button className="w-full px-4 py-3 border border-border rounded font-medium hover:bg-secondary transition-colors flex items-center justify-center gap-2">
