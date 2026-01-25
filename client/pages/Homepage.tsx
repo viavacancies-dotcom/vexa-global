@@ -1,4 +1,5 @@
 import { Globe, Shield, TrendingUp, Zap, Wind, Map } from "lucide-react";
+import { useEffect } from "react";
 import ResearchCard from "@/components/ResearchCard";
 import PublicationCard from "@/components/PublicationCard";
 import ExpertCard from "@/components/ExpertCard";
@@ -9,6 +10,10 @@ import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 import { Link } from "react-router-dom";
 
 export default function Homepage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   // Sample data - in a real app, this would come from an API
   const featuredResearch = [
     {
