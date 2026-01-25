@@ -101,8 +101,16 @@ export default function Publications() {
 
           {/* Publications Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {publications.map((pub) => (
-              <PublicationCard key={pub.id} {...pub} />
+            {publications.map((pub, idx) => (
+              <div
+                key={pub.id}
+                className="animate-fade-in-up"
+                style={{
+                  animationDelay: `${idx * 0.1}s`,
+                }}
+              >
+                <PublicationCard {...pub} />
+              </div>
             ))}
           </div>
 
