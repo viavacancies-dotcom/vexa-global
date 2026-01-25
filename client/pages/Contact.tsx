@@ -195,11 +195,11 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold mb-2">Departments</h3>
-                  <p className="text-muted-foreground space-y-1">
+                  <div className="text-muted-foreground space-y-1">
                     <div>Research & Analysis</div>
                     <div>Communications</div>
                     <div>Events & Partnerships</div>
-                  </p>
+                  </div>
                 </div>
               </div>
 
