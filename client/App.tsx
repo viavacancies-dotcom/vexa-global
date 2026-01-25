@@ -17,6 +17,7 @@ import ExpertDetail from "./pages/ExpertDetail";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
