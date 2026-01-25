@@ -74,25 +74,6 @@ export default function Experts() {
       {/* Content Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search and Filter */}
-          <div className="mb-12 animate-fade-in-up">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <input
-                type="text"
-                placeholder="Search experts..."
-                className="flex-1 px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out"
-              />
-              <select className="px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
-                <option>All Expertise Areas</option>
-                <option>Economics</option>
-                <option>Technology</option>
-                <option>Geopolitics</option>
-                <option>Climate & Energy</option>
-                <option>Regional Studies</option>
-              </select>
-            </div>
-          </div>
-
           {/* Experts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {experts.map((expert, idx) => (
