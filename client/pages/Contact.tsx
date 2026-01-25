@@ -159,7 +159,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold mb-2">Email</h3>
-                  <p className="text-muted-foreground space-y-1">
+                  <div className="text-muted-foreground space-y-1">
                     <div>
                       <a
                         href="mailto:contact@globalinstitute.org"
@@ -184,7 +184,7 @@ export default function Contact() {
                         research@globalinstitute.org
                       </a>
                     </div>
-                  </p>
+                  </div>
                 </div>
               </div>
 
