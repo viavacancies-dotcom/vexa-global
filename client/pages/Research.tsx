@@ -91,51 +91,73 @@ export default function Research() {
       <section className="pt-8 md:pt-12 pb-16 md:pb-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Filter Section */}
-          <div className="mb-12 p-6 bg-secondary rounded-lg animate-fade-in-up">
-            <div className="flex items-center gap-3 mb-6">
-              <Filter className="h-5 w-5 text-primary" />
-              <h2 className="text-lg font-serif font-bold">Filter Results</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">Topic</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
-                  <option>All Topics</option>
-                  <option>Geopolitics & Security</option>
-                  <option>International Relations</option>
-                  <option>Economics & Markets</option>
-                  <option>Technology & AI</option>
-                  <option>Energy & Climate</option>
-                  <option>Regional Studies</option>
-                </select>
+          <div className="mb-12 bg-secondary rounded-lg animate-fade-in-up overflow-hidden">
+            {/* Filter Header */}
+            <button
+              onClick={() => setFiltersOpen(!filtersOpen)}
+              className="w-full px-6 py-4 flex items-center justify-between hover:bg-secondary/80 transition-colors duration-200"
+            >
+              <div className="flex items-center gap-3">
+                <Filter className="h-5 w-5 text-primary" />
+                <h2 className="text-lg font-serif font-bold">Filter Results</h2>
               </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Region</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
-                  <option>All Regions</option>
-                  <option>Europe</option>
-                  <option>Asia-Pacific</option>
-                  <option>Americas</option>
-                  <option>Middle East & Africa</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Author</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
-                  <option>All Authors</option>
-                  <option>Dr. Elena Rossi</option>
-                  <option>Prof. James Mitchell</option>
-                  <option>Dr. Amara Okafor</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">Date Range</label>
-                <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
-                  <option>All Dates</option>
-                  <option>Last 30 Days</option>
-                  <option>Last 90 Days</option>
-                  <option>Last Year</option>
-                </select>
+              <ChevronDown
+                className="h-5 w-5 text-primary transition-transform duration-300"
+                style={{
+                  transform: filtersOpen ? "rotate(180deg)" : "rotate(0deg)",
+                }}
+              />
+            </button>
+
+            {/* Filter Content */}
+            <div
+              className="transition-all duration-300 overflow-hidden"
+              style={{
+                maxHeight: filtersOpen ? "500px" : "0px",
+                opacity: filtersOpen ? 1 : 0,
+              }}
+            >
+              <div className="px-6 pb-6 pt-2 border-t border-border grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Topic</label>
+                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                    <option>All Topics</option>
+                    <option>Geopolitics & Security</option>
+                    <option>International Relations</option>
+                    <option>Economics & Markets</option>
+                    <option>Technology & AI</option>
+                    <option>Energy & Climate</option>
+                    <option>Regional Studies</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Region</label>
+                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                    <option>All Regions</option>
+                    <option>Europe</option>
+                    <option>Asia-Pacific</option>
+                    <option>Americas</option>
+                    <option>Middle East & Africa</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Author</label>
+                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                    <option>All Authors</option>
+                    <option>Dr. Elena Rossi</option>
+                    <option>Prof. James Mitchell</option>
+                    <option>Dr. Amara Okafor</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Date Range</label>
+                  <select className="w-full px-3 py-2 border border-border rounded text-sm bg-background focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 ease-in-out">
+                    <option>All Dates</option>
+                    <option>Last 30 Days</option>
+                    <option>Last 90 Days</option>
+                    <option>Last Year</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
