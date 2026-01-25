@@ -441,16 +441,17 @@ export default function Homepage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 animate-fade-in-down">
             Ready to Engage?
           </h2>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
             Whether you're looking for specific research, seeking expert consultation,
             or interested in partnerships, we're here to help.
           </p>
           <Link
             to="/contact"
-            className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-colors"
+            className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-smooth hover:shadow-lg hover:-translate-y-1 duration-300 animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
           >
             Get in Touch
           </Link>
