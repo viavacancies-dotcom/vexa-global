@@ -140,7 +140,7 @@ export default function ResearchDetail() {
                 <h3 className="font-serif font-bold text-lg mb-4">Get This Research</h3>
                 <div className="space-y-3">
                   <button className="w-full px-4 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition-colors flex items-center justify-center gap-2">
-                    <Check className="h-4 w-4" />
+                    <Download className="h-4 w-4" />
                     Download PDF
                   </button>
                   <button className="w-full px-4 py-3 border border-border rounded font-medium hover:bg-secondary transition-colors flex items-center justify-center gap-2">
