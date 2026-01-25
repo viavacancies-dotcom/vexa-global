@@ -103,7 +103,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    className="w-full px-4 py-3 border border-border rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-all duration-200 ease-in-out"
                     required
                   />
                 </div>
