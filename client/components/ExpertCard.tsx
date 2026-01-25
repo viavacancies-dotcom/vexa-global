@@ -21,8 +21,7 @@ export default function ExpertCard({
   email,
 }: ExpertCardProps) {
   return (
-    <Link to={`/experts/${id}`}>
-      <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
+    <article className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
         {/* Profile Image or Placeholder */}
         <div className="h-48 bg-gradient-to-br from-primary-light to-primary flex items-center justify-center overflow-hidden">
           {image ? (
@@ -92,6 +91,5 @@ export default function ExpertCard({
           </div>
         </div>
       </article>
-    </Link>
   );
 }
