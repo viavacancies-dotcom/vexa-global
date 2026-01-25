@@ -48,9 +48,6 @@ export default function MainLayout() {
                 <h1 className="font-garet text-sm font-bold text-foreground">
                   Vexa Global
                 </h1>
-                <p className="text-xs text-muted-foreground leading-none">
-                  Research & Analysis
-                </p>
               </div>
             </Link>
 
