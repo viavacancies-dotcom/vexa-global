@@ -28,8 +28,7 @@ export default function ThemeCard({
   };
 
   return (
-    <Link to={`/research?topic=${id}`}>
-      <article className="group flex flex-col h-full border border-border rounded-lg p-6 bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 cursor-pointer">
+    <article className="group flex flex-col h-full border border-border rounded-lg p-6 bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 cursor-pointer">
         {/* Icon */}
         <div
           className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-all"
@@ -58,11 +57,13 @@ export default function ThemeCard({
               {count} {count === 1 ? "publication" : "publications"}
             </span>
           )}
-          <span className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all">
+          <Link
+            to={`/research?topic=${id}`}
+            className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all hover:text-primary-dark"
+          >
             Explore <ArrowRight className="h-4 w-4" />
-          </span>
+          </Link>
         </div>
       </article>
-    </Link>
   );
 }
