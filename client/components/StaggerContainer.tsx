@@ -1,16 +1,14 @@
-import { ReactNode } from "react";
+import { ReactNode, useMemo } from "react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 interface StaggerContainerProps {
   children: ReactNode;
   className?: string;
-  staggerDelay?: number;
 }
 
 export default function StaggerContainer({
   children,
   className = "",
-  staggerDelay = 0.1,
 }: StaggerContainerProps) {
   const { ref, isVisible } = useScrollAnimation();
 
@@ -18,9 +16,6 @@ export default function StaggerContainer({
     <div
       ref={ref}
       className={className}
-      style={{
-        "--stagger-delay": `${staggerDelay}s`,
-      } as React.CSSProperties}
     >
       <div className={isVisible ? "" : "opacity-0"}>
         {children}
@@ -33,19 +28,25 @@ interface StaggerItemProps {
   children: ReactNode;
   className?: string;
   index?: number;
+  staggerDelay?: number;
 }
 
 export function StaggerItem({
   children,
   className = "",
   index = 0,
+  staggerDelay = 0.1,
 }: StaggerItemProps) {
+  // Memoize style object to prevent prop identity changes on parent re-renders
+  const style = useMemo(
+    () => ({ animationDelay: `${index * staggerDelay}s` }),
+    [index, staggerDelay]
+  );
+
   return (
     <div
       className={`animate-fade-in-up ${className}`}
-      style={{
-        animationDelay: `${index * 0.1}s`,
-      }}
+      style={style}
     >
       {children}
     </div>
