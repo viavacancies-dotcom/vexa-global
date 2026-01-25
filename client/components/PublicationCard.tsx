@@ -29,7 +29,7 @@ export default function PublicationCard({
 
   return (
     <Link to={`/publications/${id}`}>
-      <article className="flex flex-col h-full border border-border rounded-lg p-6 hover:shadow-lg transition-shadow bg-card">
+      <article className="flex flex-col h-full border border-border rounded-lg p-6 bg-card hover:shadow-xl hover:border-primary transition-smooth hover:-translate-y-1 group cursor-pointer">
         {/* Type Badge */}
         <div className="mb-4">
           <span
