@@ -59,7 +59,7 @@ export default function ThemeCard({
           )}
           <Link
             to={`/research?topic=${id}`}
-            className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all hover:text-primary-dark"
+            className="ml-auto inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:gap-2 transition-all duration-200 ease-in-out hover:text-primary-dark"
           >
             Explore <ArrowRight className="h-4 w-4" />
           </Link>
