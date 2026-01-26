@@ -65,27 +65,30 @@ function ResearchCard({
           />
         )}
 
-        <div className="flex flex-col flex-grow p-6 min-h-80">
-          {/* Tag */}
-          <div className="mb-4">
-            <span className="inline-block text-xs font-garet font-semibold px-3 py-1.5 rounded-full text-white transition-all duration-200"
-              style={{ backgroundColor: accentColorVar[theme] }}>
-              {tag}
-            </span>
+        <div className="flex flex-col h-full p-6">
+          {/* Top Content */}
+          <div className="flex-grow">
+            {/* Tag */}
+            <div className="mb-4">
+              <span className="inline-block text-xs font-garet font-semibold px-3 py-1.5 rounded-full text-white transition-all duration-200"
+                style={{ backgroundColor: accentColorVar[theme] }}>
+                {tag}
+              </span>
+            </div>
+
+            {/* Title */}
+            <h3 className="text-lg font-garet font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-200 ease-in-out line-clamp-2">
+              {title}
+            </h3>
+
+            {/* Abstract */}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {abstract}
+            </p>
           </div>
 
-          {/* Title */}
-          <h3 className="text-lg font-garet font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-200 ease-in-out line-clamp-2">
-            {title}
-          </h3>
-
-          {/* Abstract */}
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-grow leading-relaxed">
-            {abstract}
-          </p>
-
           {/* Footer - Meta + CTA */}
-          <div className="mt-auto">
+          <div className="mt-6">
             {/* Meta */}
             <div className="flex flex-col gap-2.5 text-xs text-muted-foreground border-t border-border/50 pt-5 mb-4">
               <div className="flex items-center gap-2.5">
