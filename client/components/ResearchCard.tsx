@@ -67,7 +67,7 @@ function ResearchCard({
 
         <div className="flex flex-col h-full p-6">
           {/* Top Content */}
-          <div className="flex-grow">
+          <div className="flex-grow min-h-40">
             {/* Tag */}
             <div className="mb-4">
               <span className="inline-block text-xs font-garet font-semibold px-3 py-1.5 rounded-full text-white transition-all duration-200"
@@ -82,7 +82,7 @@ function ResearchCard({
             </h3>
 
             {/* Abstract */}
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
               {abstract}
             </p>
           </div>
