@@ -32,16 +32,16 @@ export default function PolicyModal({ isOpen, onClose, title, content }: PolicyM
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-lg shadow-depth-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto animate-scale-in-bounce">
+      <div className="relative bg-white rounded-lg shadow-depth-2xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto animate-scale-in-bounce [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar-track]:bg-secondary [&::-webkit-scrollbar-thumb]:bg-primary [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:hover:bg-primary-dark">
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-border px-6 py-4 flex items-center justify-between">
           <h2 className="text-2xl font-serif font-bold text-foreground">{title}</h2>
           <button
             onClick={onClose}
-            className="p-1 hover:bg-secondary rounded-md transition-colors"
+            className="flex items-center justify-center h-10 w-10 bg-primary rounded-full hover:bg-primary-dark hover:shadow-md transition-all duration-200 flex-shrink-0"
             aria-label="Close modal"
           >
-            <X className="h-6 w-6 text-foreground" />
+            <X className="h-5 w-5 text-white" />
           </button>
         </div>
 
@@ -54,16 +54,6 @@ export default function PolicyModal({ isOpen, onClose, title, content }: PolicyM
               </p>
             ))}
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="border-t border-border px-6 py-4 bg-secondary/50">
-          <button
-            onClick={onClose}
-            className="w-full px-4 py-2 bg-primary text-white font-medium rounded hover:bg-primary-dark transition-colors"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>
