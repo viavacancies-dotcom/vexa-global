@@ -365,6 +365,16 @@ contact@vexaglobal.org`;
           </div>
         </div>
       </footer>
+
+      {/* Policy Modals */}
+      {policyModal.type && (
+        <PolicyModal
+          isOpen={policyModal.isOpen}
+          onClose={() => setPolicyModal({ isOpen: false, type: null })}
+          title={getPolicyTitle(policyModal.type)}
+          content={getPolicyContent(policyModal.type)}
+        />
+      )}
     </div>
   );
 }
