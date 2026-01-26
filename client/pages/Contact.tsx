@@ -92,26 +92,6 @@ export default function Contact() {
                 );
               })}
 
-              {/* Quick Links */}
-              <div className="pt-4 border-t border-border">
-                <h3 className="text-sm font-bold uppercase tracking-wide text-primary mb-3">
-                  Quick Links
-                </h3>
-                <div className="space-y-2 text-sm">
-                  <a
-                    href="mailto:media@globalinstitute.org"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    media@globalinstitute.org
-                  </a>
-                  <a
-                    href="mailto:research@globalinstitute.org"
-                    className="block text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    research@globalinstitute.org
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form - Right Side */}
