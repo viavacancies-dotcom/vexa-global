@@ -348,12 +348,18 @@ contact@vexaglobal.org`;
                 &copy; 2024 Vexa Global. All rights reserved.
               </p>
               <div className="flex gap-6">
-                <a href="#" className="hover:text-primary transition-colors duration-200 ease-in-out">
+                <button
+                  onClick={() => setPolicyModal({ isOpen: true, type: "privacy" })}
+                  className="hover:text-primary transition-colors duration-200 ease-in-out cursor-pointer bg-none border-none p-0"
+                >
                   Privacy Policy
-                </a>
-                <a href="#" className="hover:text-primary transition-colors duration-200 ease-in-out">
+                </button>
+                <button
+                  onClick={() => setPolicyModal({ isOpen: true, type: "terms" })}
+                  className="hover:text-primary transition-colors duration-200 ease-in-out cursor-pointer bg-none border-none p-0"
+                >
                   Terms of Use
-                </a>
+                </button>
               </div>
             </div>
           </div>
