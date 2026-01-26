@@ -44,13 +44,13 @@ export default function About() {
 
   return (
     <div>
-      {/* Hero Section - Compact */}
-      <section className="bg-primary text-white py-12 md:py-16">
+      {/* Hero Section */}
+      <section className="bg-primary text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
             About Global Institute
           </h1>
-          <p className="text-lg text-primary-foreground/90 max-w-2xl">
+          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl">
             An independent think tank dedicated to advancing policy research and providing evidence-based analysis on critical global issues.
           </p>
         </div>
