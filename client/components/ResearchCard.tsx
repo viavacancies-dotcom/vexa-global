@@ -84,22 +84,25 @@ function ResearchCard({
             {abstract}
           </p>
 
-          {/* Meta */}
-          <div className="flex flex-col gap-2.5 text-xs text-muted-foreground border-t border-border/50 pt-5 mt-auto">
-            <div className="flex items-center gap-2.5">
-              <User className="h-4 w-4 text-primary/60" />
-              <span className="font-garet">{author}</span>
+          {/* Footer - Meta + CTA */}
+          <div className="mt-auto">
+            {/* Meta */}
+            <div className="flex flex-col gap-2.5 text-xs text-muted-foreground border-t border-border/50 pt-5 mb-4">
+              <div className="flex items-center gap-2.5">
+                <User className="h-4 w-4 text-primary/60" />
+                <span className="font-garet">{author}</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Calendar className="h-4 w-4 text-primary/60" />
+                <span className="font-garet">{date}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2.5">
-              <Calendar className="h-4 w-4 text-primary/60" />
-              <span className="font-garet">{date}</span>
-            </div>
-          </div>
 
-          {/* CTA */}
-          <span className="mt-5 inline-flex items-center gap-2 text-sm font-garet font-semibold text-primary group-hover:gap-3 transition-all duration-200 ease-in-out">
-            Read More <ArrowRight className="h-4 w-4" />
-          </span>
+            {/* CTA */}
+            <span className="inline-flex items-center gap-2 text-sm font-garet font-semibold text-primary group-hover:gap-3 transition-all duration-200 ease-in-out">
+              Read More <ArrowRight className="h-4 w-4" />
+            </span>
+          </div>
         </div>
       </article>
     </Link>
