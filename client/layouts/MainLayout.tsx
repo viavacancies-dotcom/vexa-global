@@ -241,7 +241,7 @@ export default function MainLayout() {
           <div className="border-t border-border pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
               <p>
-                &copy; 2024 Global Institute. All rights reserved.
+                &copy; 2024 Vexa Global. All rights reserved.
               </p>
               <div className="flex gap-6">
                 <a href="#" className="hover:text-primary transition-colors duration-200 ease-in-out">
