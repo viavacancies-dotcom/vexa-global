@@ -49,8 +49,6 @@ export default function EventDetail() {
         email: "j.mitchell@globalinstitute.org",
       },
     ],
-    capacity: 500,
-    registered: 287,
     status: "Upcoming",
   };
 
@@ -155,19 +153,8 @@ export default function EventDetail() {
                     <p className="text-sm text-foreground">{event.status}</p>
                   </div>
 
-                  <div>
-                    <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">
-                      Registered
-                    </p>
-                    <p className="text-sm text-foreground">
-                      {event.registered} / {event.capacity} attendees
-                    </p>
-                  </div>
                 </div>
 
-                <button className="w-full px-4 py-3 bg-primary text-white rounded font-medium hover:bg-primary-dark transition-colors">
-                  Register Now
-                </button>
               </div>
 
               {/* Speakers Preview */}
@@ -197,20 +184,6 @@ export default function EventDetail() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-20 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-serif font-bold mb-6">
-            Secure Your Spot
-          </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8">
-            Limited capacity available. Register now to join this exclusive webinar.
-          </p>
-          <button className="inline-block px-8 py-4 bg-white text-primary font-medium rounded hover:bg-secondary transition-smooth hover:shadow-lg hover:-translate-y-1 duration-300">
-            Register Now
-          </button>
-        </div>
-      </section>
     </div>
   );
 }
