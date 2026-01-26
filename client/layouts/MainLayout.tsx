@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Menu, X, Facebook, Instagram } from "lucide-react";
 import { useState } from "react";
+import PolicyModal from "@/components/PolicyModal";
 
 export default function MainLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [policyModal, setPolicyModal] = useState<{
+    isOpen: boolean;
+    type: "privacy" | "terms" | null;
+  }>({ isOpen: false, type: null });
 
   // Configurable social media links
   const socialLinks = [
