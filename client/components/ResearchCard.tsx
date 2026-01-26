@@ -65,7 +65,7 @@ function ResearchCard({
           />
         )}
 
-        <div className="flex flex-col flex-grow p-6">
+        <div className="flex flex-col flex-grow p-6 min-h-80">
           {/* Tag */}
           <div className="mb-4">
             <span className="inline-block text-xs font-garet font-semibold px-3 py-1.5 rounded-full text-white transition-all duration-200"
@@ -85,7 +85,7 @@ function ResearchCard({
           </p>
 
           {/* Meta */}
-          <div className="flex flex-col gap-2.5 text-xs text-muted-foreground border-t border-border/50 pt-5">
+          <div className="flex flex-col gap-2.5 text-xs text-muted-foreground border-t border-border/50 pt-5 mt-auto">
             <div className="flex items-center gap-2.5">
               <User className="h-4 w-4 text-primary/60" />
               <span className="font-garet">{author}</span>
