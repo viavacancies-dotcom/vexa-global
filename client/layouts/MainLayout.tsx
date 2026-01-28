@@ -140,7 +140,7 @@ contact@vexaglobal.org`;
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-full mx-auto px-2 sm:px-3 lg:px-4">
-          <div className="flex items-center justify-between" style={{ height: "70px" }}>
+          <div className="flex items-center justify-between" style={{ height: "80px" }}>
             {/* Logo / Institute Name */}
             <Link to="/" className="flex items-center gap-2">
               <img
