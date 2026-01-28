@@ -79,7 +79,7 @@ export default function Publications() {
   }, []);
 
   const filteredPublications = PUBLICATIONS_DATA.filter(
-    (pub) => activeFilter === "All" || pub.type === activeFilter
+    (pub) => activeFilter === "All" || pub.type === activeFilter,
   );
 
   return (
@@ -91,7 +91,8 @@ export default function Publications() {
             Publications
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl">
-            Access our full library of reports, policy briefs, articles, and research papers.
+            Access our full library of reports, policy briefs, articles, and
+            research papers.
           </p>
         </div>
       </section>

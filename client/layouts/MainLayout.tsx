@@ -140,7 +140,10 @@ contact@vexaglobal.org`;
       {/* Header */}
       <header className="border-b border-border bg-background/95 backdrop-blur sticky top-0 z-50 transition-all duration-300">
         <div className="max-w-full mx-auto px-2 sm:px-3 lg:px-4">
-          <div className="flex items-center justify-between" style={{ height: "80px" }}>
+          <div
+            className="flex items-center justify-between"
+            style={{ height: "80px" }}
+          >
             {/* Logo / Institute Name */}
             <Link to="/" className="flex items-center gap-2">
               <img
@@ -148,7 +151,7 @@ contact@vexaglobal.org`;
                 alt="Vexa Global"
                 className="h-10 sm:h-12 w-auto"
                 style={{
-                  filter: 'hue-rotate(-5deg) saturate(1.1)',
+                  filter: "hue-rotate(-5deg) saturate(1.1)",
                 }}
               />
             </Link>
@@ -347,18 +350,20 @@ contact@vexaglobal.org`;
 
           <div className="border-t border-border pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-              <p>
-                &copy; 2024 Vexa Global. All rights reserved.
-              </p>
+              <p>&copy; 2024 Vexa Global. All rights reserved.</p>
               <div className="flex gap-6">
                 <button
-                  onClick={() => setPolicyModal({ isOpen: true, type: "privacy" })}
+                  onClick={() =>
+                    setPolicyModal({ isOpen: true, type: "privacy" })
+                  }
                   className="hover:text-primary transition-colors duration-200 ease-in-out cursor-pointer bg-none border-none p-0"
                 >
                   Privacy Policy
                 </button>
                 <button
-                  onClick={() => setPolicyModal({ isOpen: true, type: "terms" })}
+                  onClick={() =>
+                    setPolicyModal({ isOpen: true, type: "terms" })
+                  }
                   className="hover:text-primary transition-colors duration-200 ease-in-out cursor-pointer bg-none border-none p-0"
                 >
                   Terms of Use

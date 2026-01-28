@@ -92,7 +92,8 @@ const PUBLICATIONS = [
     type: "Brief" as const,
     authors: ["Dr. Amara Okafor"],
     date: "February 2024",
-    abstract: "Policy recommendations for enhancing effectiveness and equity in international carbon trading mechanisms.",
+    abstract:
+      "Policy recommendations for enhancing effectiveness and equity in international carbon trading mechanisms.",
   },
   {
     id: "p3",
@@ -257,8 +258,8 @@ export default function Homepage() {
               Understanding Our Complex World
             </h1>
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in-up">
-              Independent research and policy analysis for informed decision-making in a
-              rapidly changing global landscape.
+              Independent research and policy analysis for informed
+              decision-making in a rapidly changing global landscape.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
               <Link
@@ -309,7 +310,8 @@ export default function Homepage() {
               Featured Research
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Latest insights from our research teams on the most pressing global issues.
+              Latest insights from our research teams on the most pressing
+              global issues.
             </p>
           </div>
 
@@ -340,7 +342,8 @@ export default function Homepage() {
               Latest Analysis
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Recent commentary and analysis on current events and emerging trends.
+              Recent commentary and analysis on current events and emerging
+              trends.
             </p>
           </div>
 
@@ -473,8 +476,8 @@ export default function Homepage() {
             Ready to Engage?
           </h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 animate-fade-in-up">
-            Whether you're looking for specific research, seeking expert consultation,
-            or interested in partnerships, we're here to help.
+            Whether you're looking for specific research, seeking expert
+            consultation, or interested in partnerships, we're here to help.
           </p>
           <Link
             to="/contact"

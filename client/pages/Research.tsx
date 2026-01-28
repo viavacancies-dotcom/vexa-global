@@ -84,9 +84,10 @@ export default function Research() {
 
   // Get initial topic from URL parameter, otherwise default to "All Topics"
   const topicFromUrl = searchParams.get("topic");
-  const initialTopic = topicFromUrl && themeToTagMap[topicFromUrl]
-    ? themeToTagMap[topicFromUrl]
-    : "All Topics";
+  const initialTopic =
+    topicFromUrl && themeToTagMap[topicFromUrl]
+      ? themeToTagMap[topicFromUrl]
+      : "All Topics";
 
   const [selectedTopic, setSelectedTopic] = useState(initialTopic);
   const [selectedRegion, setSelectedRegion] = useState("All Regions");
@@ -100,8 +101,10 @@ export default function Research() {
 
   // Filter logic
   const filteredResearch = ALL_RESEARCH.filter((research) => {
-    const matchesAuthor = selectedAuthor === "All Authors" || research.author === selectedAuthor;
-    const matchesTopic = selectedTopic === "All Topics" || research.tag === selectedTopic;
+    const matchesAuthor =
+      selectedAuthor === "All Authors" || research.author === selectedAuthor;
+    const matchesTopic =
+      selectedTopic === "All Topics" || research.tag === selectedTopic;
     const matchesRegion = selectedRegion === "All Regions"; // Region filtering would need region data in items
     const matchesDateRange = selectedDateRange === "All Dates"; // Date filtering would need date parsing
 
@@ -117,8 +120,8 @@ export default function Research() {
             Research & Analysis
           </h1>
           <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl">
-            Explore our comprehensive research across key policy areas, with advanced
-            filtering by topic, region, author, and date.
+            Explore our comprehensive research across key policy areas, with
+            advanced filtering by topic, region, author, and date.
           </p>
         </div>
       </section>
@@ -137,7 +140,9 @@ export default function Research() {
                 <div className="p-2 bg-primary/10 rounded-lg">
                   <Filter className="h-5 w-5 text-primary" />
                 </div>
-                <h2 className="text-lg font-garet font-semibold text-foreground">Advanced Filters</h2>
+                <h2 className="text-lg font-garet font-semibold text-foreground">
+                  Advanced Filters
+                </h2>
               </div>
               <ChevronDown
                 className="h-5 w-5 text-primary transition-transform duration-300"
@@ -157,7 +162,9 @@ export default function Research() {
             >
               <div className="px-6 pb-6 pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div>
-                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Topic</label>
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">
+                    Topic
+                  </label>
                   <select
                     value={selectedTopic}
                     onChange={(e) => setSelectedTopic(e.target.value)}
@@ -173,7 +180,9 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Region</label>
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">
+                    Region
+                  </label>
                   <select
                     value={selectedRegion}
                     onChange={(e) => setSelectedRegion(e.target.value)}
@@ -187,7 +196,9 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Author</label>
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">
+                    Author
+                  </label>
                   <select
                     value={selectedAuthor}
                     onChange={(e) => setSelectedAuthor(e.target.value)}
@@ -203,7 +214,9 @@ export default function Research() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Date Range</label>
+                  <label className="block text-sm font-garet font-semibold mb-3 text-foreground">
+                    Date Range
+                  </label>
                   <select
                     value={selectedDateRange}
                     onChange={(e) => setSelectedDateRange(e.target.value)}
@@ -244,7 +257,9 @@ export default function Research() {
             <button className="px-4 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               Previous
             </button>
-            <button className="px-3 py-2.5 bg-primary text-white rounded-lg text-sm font-garet font-medium hover:bg-primary-light transition-all duration-200 ease-in-out shadow-sm">1</button>
+            <button className="px-3 py-2.5 bg-primary text-white rounded-lg text-sm font-garet font-medium hover:bg-primary-light transition-all duration-200 ease-in-out shadow-sm">
+              1
+            </button>
             <button className="px-3 py-2.5 border border-border rounded-lg text-sm font-garet font-medium hover:bg-secondary hover:border-primary/30 transition-all duration-200 ease-in-out">
               2
             </button>
