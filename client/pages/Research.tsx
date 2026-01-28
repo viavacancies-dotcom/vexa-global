@@ -201,13 +201,24 @@ export default function Research() {
           </div>
 
           {/* Results Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {ALL_RESEARCH.map((research, idx) => (
-              <StaggerItem key={research.id} index={idx}>
-                <ResearchCard {...research} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          {filteredResearch.length > 0 ? (
+            <StaggerContainer
+              key={`${selectedTopic}-${selectedRegion}-${selectedAuthor}-${selectedDateRange}`}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {filteredResearch.map((research, idx) => (
+                <StaggerItem key={research.id} index={idx}>
+                  <ResearchCard {...research} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">
+                No research found matching your filters.
+              </p>
+            </div>
+          )}
 
           {/* Pagination */}
           <div className="mt-16 flex justify-center items-center gap-3 animate-fade-in-up">
