@@ -68,9 +68,27 @@ const ALL_RESEARCH = [
   },
 ];
 
+// Map theme IDs to research tags for filtering
+const themeToTagMap: Record<string, string> = {
+  geopolitics: "Geopolitics",
+  relations: "International Relations",
+  economics: "Trade & Economics",
+  technology: "Technology & Strategy",
+  energy: "Climate & Energy",
+  regional: "Regional Studies",
+};
+
 export default function Research() {
+  const [searchParams] = useSearchParams();
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [selectedTopic, setSelectedTopic] = useState("All Topics");
+
+  // Get initial topic from URL parameter, otherwise default to "All Topics"
+  const topicFromUrl = searchParams.get("topic");
+  const initialTopic = topicFromUrl && themeToTagMap[topicFromUrl]
+    ? themeToTagMap[topicFromUrl]
+    : "All Topics";
+
+  const [selectedTopic, setSelectedTopic] = useState(initialTopic);
   const [selectedRegion, setSelectedRegion] = useState("All Regions");
   const [selectedAuthor, setSelectedAuthor] = useState("All Authors");
   const [selectedDateRange, setSelectedDateRange] = useState("All Dates");
