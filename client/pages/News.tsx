@@ -1,8 +1,17 @@
 import { Calendar, User } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+const newsCategories = [
+  { label: "All News", value: "All" },
+  { label: "Press Releases", value: "Press Release" },
+  { label: "News", value: "News" },
+  { label: "Media", value: "Event Update" },
+];
+
 export default function News() {
+  const [activeFilter, setActiveFilter] = useState("All");
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
