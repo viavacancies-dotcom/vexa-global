@@ -1,5 +1,6 @@
 import { Filter, ChevronDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import ResearchCard from "@/components/ResearchCard";
 import StaggerContainer, { StaggerItem } from "@/components/StaggerContainer";
 
