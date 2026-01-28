@@ -119,13 +119,17 @@ export default function News() {
           </div>
 
           {/* News List */}
-          <div className="space-y-8">
-            {newsItems.map((item) => (
+          {filteredNews.length > 0 ? (
+            <div className="space-y-8">
+              {filteredNews.map((item) => (
               <article key={item.id} className="border-b border-border pb-8 last:border-b-0">
                 <div className="mb-4">
-                  <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary">
+                  <button
+                    onClick={() => setActiveFilter(item.category)}
+                    className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-200 ease-in-out cursor-pointer"
+                  >
                     {item.category}
-                  </span>
+                  </button>
                 </div>
 
                 <h2 className="text-2xl font-serif font-bold text-foreground mb-3 hover:text-primary transition-colors cursor-pointer">
@@ -155,7 +159,14 @@ export default function News() {
                 </Link>
               </article>
             ))}
-          </div>
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">
+                No news found in this category.
+              </p>
+            </div>
+          )}
 
           {/* Pagination */}
           <div className="mt-12 flex justify-center gap-2">
