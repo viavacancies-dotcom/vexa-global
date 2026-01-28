@@ -139,19 +139,27 @@ export default function Research() {
               <div className="px-6 pb-6 pt-4 border-t border-border/50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div>
                   <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Topic</label>
-                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
+                  <select
+                    value={selectedTopic}
+                    onChange={(e) => setSelectedTopic(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer"
+                  >
                     <option>All Topics</option>
-                    <option>Geopolitics & Security</option>
-                    <option>International Relations</option>
-                    <option>Economics & Markets</option>
-                    <option>Technology & AI</option>
-                    <option>Energy & Climate</option>
+                    <option>Trade & Economics</option>
+                    <option>Technology & Strategy</option>
+                    <option>Climate & Energy</option>
+                    <option>Geopolitics</option>
                     <option>Regional Studies</option>
+                    <option>International Relations</option>
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Region</label>
-                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
+                  <select
+                    value={selectedRegion}
+                    onChange={(e) => setSelectedRegion(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer"
+                  >
                     <option>All Regions</option>
                     <option>Europe</option>
                     <option>Asia-Pacific</option>
@@ -161,16 +169,27 @@ export default function Research() {
                 </div>
                 <div>
                   <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Author</label>
-                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
+                  <select
+                    value={selectedAuthor}
+                    onChange={(e) => setSelectedAuthor(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer"
+                  >
                     <option>All Authors</option>
                     <option>Dr. Elena Rossi</option>
                     <option>Prof. James Mitchell</option>
                     <option>Dr. Amara Okafor</option>
+                    <option>Dr. Sofia Bergström</option>
+                    <option>Prof. Rajesh Kumar</option>
+                    <option>Dr. Marcus Weber</option>
                   </select>
                 </div>
                 <div>
                   <label className="block text-sm font-garet font-semibold mb-3 text-foreground">Date Range</label>
-                  <select className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer">
+                  <select
+                    value={selectedDateRange}
+                    onChange={(e) => setSelectedDateRange(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-border rounded-lg text-sm bg-background hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 ease-in-out cursor-pointer"
+                  >
                     <option>All Dates</option>
                     <option>Last 30 Days</option>
                     <option>Last 90 Days</option>
