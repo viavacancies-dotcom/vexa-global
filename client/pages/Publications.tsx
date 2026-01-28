@@ -117,13 +117,21 @@ export default function Publications() {
           </div>
 
           {/* Publications Grid */}
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PUBLICATIONS_DATA.map((pub, idx) => (
-              <StaggerItem key={pub.id} index={idx}>
-                <PublicationCard {...pub} />
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          {filteredPublications.length > 0 ? (
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPublications.map((pub, idx) => (
+                <StaggerItem key={pub.id} index={idx}>
+                  <PublicationCard {...pub} />
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground text-lg">
+                No publications found for this category.
+              </p>
+            </div>
+          )}
 
           {/* Load More */}
           <div className="mt-12 text-center animate-fade-in-up">
