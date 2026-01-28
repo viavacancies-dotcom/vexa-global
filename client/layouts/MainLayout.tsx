@@ -147,6 +147,9 @@ contact@vexaglobal.org`;
                 src="https://cdn.builder.io/api/v1/image/assets%2F30cffefbd891455492f8e1b92fb414ad%2F71548cef8d674304ac09344916bd53c8?format=webp&width=800&height=1200"
                 alt="Vexa Global"
                 className="h-10 sm:h-12 w-auto"
+                style={{
+                  filter: 'hue-rotate(-5deg) saturate(1.1)',
+                }}
               />
             </Link>
 
