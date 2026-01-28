@@ -162,6 +162,29 @@ const UPCOMING_EVENTS = [
   },
 ];
 
+// Helper function to calculate publication counts per theme
+const calculateThemeCounts = () => {
+  const allResearch = [...FEATURED_RESEARCH, ...LATEST_ANALYSIS];
+  const counts: Record<string, number> = {
+    geopolitics: 0,
+    relations: 0,
+    economics: 0,
+    technology: 0,
+    energy: 0,
+    regional: 0,
+  };
+
+  allResearch.forEach((item) => {
+    if (item.theme in counts) {
+      counts[item.theme]++;
+    }
+  });
+
+  return counts;
+};
+
+const THEME_COUNTS = calculateThemeCounts();
+
 const RESEARCH_THEMES = [
   {
     id: "geopolitics",
@@ -170,7 +193,7 @@ const RESEARCH_THEMES = [
       "Analysis of power dynamics, conflicts, and strategic competition in the global system.",
     icon: Shield,
     theme: "geopolitics" as const,
-    count: 24,
+    count: THEME_COUNTS.geopolitics,
   },
   {
     id: "relations",
@@ -179,7 +202,7 @@ const RESEARCH_THEMES = [
       "Institutional frameworks, diplomacy, and cooperation mechanisms between states.",
     icon: Globe,
     theme: "relations" as const,
-    count: 18,
+    count: THEME_COUNTS.relations,
   },
   {
     id: "economics",
@@ -188,7 +211,7 @@ const RESEARCH_THEMES = [
       "Global trade, development, financial systems, and economic policy analysis.",
     icon: TrendingUp,
     theme: "economics" as const,
-    count: 31,
+    count: THEME_COUNTS.economics,
   },
   {
     id: "technology",
@@ -197,7 +220,7 @@ const RESEARCH_THEMES = [
       "Digital transformation, emerging technologies, and their societal implications.",
     icon: Zap,
     theme: "technology" as const,
-    count: 15,
+    count: THEME_COUNTS.technology,
   },
   {
     id: "energy",
@@ -206,7 +229,7 @@ const RESEARCH_THEMES = [
       "Energy transitions, climate policy, sustainability, and environmental governance.",
     icon: Wind,
     theme: "energy" as const,
-    count: 22,
+    count: THEME_COUNTS.energy,
   },
   {
     id: "regional",
@@ -215,7 +238,7 @@ const RESEARCH_THEMES = [
       "In-depth analysis of specific regions, their dynamics, and international engagement.",
     icon: Map,
     theme: "regional" as const,
-    count: 19,
+    count: THEME_COUNTS.regional,
   },
 ];
 
