@@ -60,11 +60,27 @@ const PUBLICATIONS_DATA = [
   },
 ];
 
+type PublicationType = "All" | "Report" | "Brief" | "Article" | "Paper";
+
+const filterTabs = [
+  { label: "All Publications", type: "All" as const },
+  { label: "Reports", type: "Report" as const },
+  { label: "Policy Briefs", type: "Brief" as const },
+  { label: "Articles", type: "Article" as const },
+  { label: "Working Papers", type: "Paper" as const },
+];
+
 export default function Publications() {
+  const [activeFilter, setActiveFilter] = useState<PublicationType>("All");
+
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const filteredPublications = PUBLICATIONS_DATA.filter(
+    (pub) => activeFilter === "All" || pub.type === activeFilter
+  );
 
   return (
     <div>
