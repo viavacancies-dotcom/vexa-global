@@ -79,6 +79,11 @@ export default function News() {
     },
   ];
 
+  const filteredNews =
+    activeFilter === "All"
+      ? newsItems
+      : newsItems.filter((item) => item.category === activeFilter);
+
   return (
     <div>
       {/* Hero Section */}
