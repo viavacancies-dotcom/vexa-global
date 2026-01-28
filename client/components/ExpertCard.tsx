@@ -84,12 +84,10 @@ function ExpertCard({
           </div>
 
           {/* Footer - Contact / CTA (pinned to bottom) */}
-          <div className="border-t border-border pt-4 mt-4 flex items-center justify-between">
+          <div className="flex items-center justify-between border-t border-border pt-4 mt-4">
             {/* View Profile button - bottom left */}
-            <div className="flex-grow">
-              <div className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors cursor-pointer">
-                View Profile <ArrowRight className="h-4 w-4" />
-              </div>
+            <div className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors cursor-pointer">
+              View Profile <ArrowRight className="h-4 w-4" />
             </div>
             {/* Email button - right side */}
             {email && (
