@@ -44,42 +44,47 @@ function ExpertCard({
           )}
         </div>
 
-        <div className="flex flex-col flex-grow p-5">
-          {/* Name */}
-          <h3 className="text-lg font-serif font-bold text-foreground mb-1">
-            {name}
-          </h3>
+        <div className="flex flex-col h-full p-5">
+          {/* Header - Name and Role */}
+          <div className="mb-4">
+            <h3 className="text-lg font-serif font-bold text-foreground mb-1">
+              {name}
+            </h3>
 
-          {/* Role */}
-          <div className="flex items-center gap-2 mb-4 text-sm text-primary font-medium">
-            <Briefcase className="h-4 w-4" />
-            <span>{role}</span>
+            {/* Role */}
+            <div className="flex items-center gap-2 text-sm text-primary font-medium">
+              <Briefcase className="h-4 w-4" />
+              <span>{role}</span>
+            </div>
           </div>
 
-          {/* Bio */}
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-2 flex-grow">
-            {bio}
-          </p>
+          {/* Content - Bio and Tags (grows to fill available space) */}
+          <div className="flex-grow">
+            {/* Bio */}
+            <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+              {bio}
+            </p>
 
-          {/* Expertise Tags */}
-          <div className="mb-4 flex flex-wrap gap-2">
-            {expertise.slice(0, 3).map((exp) => (
-              <span
-                key={exp}
-                className="inline-block text-xs px-2 py-1 rounded bg-secondary text-foreground"
-              >
-                {exp}
-              </span>
-            ))}
-            {expertise.length > 3 && (
-              <span className="inline-block text-xs px-2 py-1 rounded bg-secondary text-muted-foreground">
-                +{expertise.length - 3}
-              </span>
-            )}
+            {/* Expertise Tags */}
+            <div className="flex flex-wrap gap-2">
+              {expertise.slice(0, 3).map((exp) => (
+                <span
+                  key={exp}
+                  className="inline-block text-xs px-2 py-1 rounded bg-secondary text-foreground"
+                >
+                  {exp}
+                </span>
+              ))}
+              {expertise.length > 3 && (
+                <span className="inline-block text-xs px-2 py-1 rounded bg-secondary text-muted-foreground">
+                  +{expertise.length - 3}
+                </span>
+              )}
+            </div>
           </div>
 
-          {/* Contact / CTA */}
-          <div className="flex items-center justify-between border-t border-border pt-4">
+          {/* Footer - Contact / CTA (pinned to bottom) */}
+          <div className="flex items-center justify-between border-t border-border pt-4 mt-4">
             <span className="inline-flex items-center gap-2 text-sm font-medium text-primary">
               View Profile <ArrowRight className="h-4 w-4" />
             </span>
