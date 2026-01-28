@@ -69,11 +69,25 @@ const ALL_RESEARCH = [
 
 export default function Research() {
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [selectedTopic, setSelectedTopic] = useState("All Topics");
+  const [selectedRegion, setSelectedRegion] = useState("All Regions");
+  const [selectedAuthor, setSelectedAuthor] = useState("All Authors");
+  const [selectedDateRange, setSelectedDateRange] = useState("All Dates");
 
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  // Filter logic
+  const filteredResearch = ALL_RESEARCH.filter((research) => {
+    const matchesAuthor = selectedAuthor === "All Authors" || research.author === selectedAuthor;
+    const matchesTopic = selectedTopic === "All Topics" || research.tag === selectedTopic;
+    const matchesRegion = selectedRegion === "All Regions"; // Region filtering would need region data in items
+    const matchesDateRange = selectedDateRange === "All Dates"; // Date filtering would need date parsing
+
+    return matchesAuthor && matchesTopic && matchesRegion && matchesDateRange;
+  });
 
   return (
     <div>
