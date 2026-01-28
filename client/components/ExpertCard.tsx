@@ -26,9 +26,9 @@ function ExpertCard({
       to={`/experts/${id}`}
       className="flex flex-col h-full border border-border rounded-lg overflow-hidden bg-card card-interactive group cursor-pointer no-underline"
     >
-      <article>
+      <article className="flex flex-col h-full">
         {/* Profile Image or Placeholder */}
-        <div className="h-48 bg-gradient-to-br from-primary-light to-primary flex items-center justify-center overflow-hidden">
+        <div className="h-48 bg-gradient-to-br from-primary-light to-primary flex items-center justify-center overflow-hidden flex-shrink-0">
           {image ? (
             <img
               src={image}
@@ -44,7 +44,7 @@ function ExpertCard({
           )}
         </div>
 
-        <div className="flex flex-col h-full p-5">
+        <div className="flex flex-col flex-grow p-5">
           {/* Header - Name and Role */}
           <div className="mb-4">
             <h3 className="text-lg font-serif font-bold text-foreground mb-1">
