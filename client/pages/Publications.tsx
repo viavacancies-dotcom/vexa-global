@@ -118,7 +118,10 @@ export default function Publications() {
 
           {/* Publications Grid */}
           {filteredPublications.length > 0 ? (
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <StaggerContainer
+              key={activeFilter}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
               {filteredPublications.map((pub, idx) => (
                 <StaggerItem key={pub.id} index={idx}>
                   <PublicationCard {...pub} />
