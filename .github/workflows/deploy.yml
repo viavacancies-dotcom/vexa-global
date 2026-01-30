@@ -74,8 +74,8 @@ jobs:
           rm -rf spa.prev;
           if [ -d spa ]; then mv spa spa.prev; fi;
           mv spa.new spa;
-          chown -R deploy:www-data spa;
           find spa -type d -exec chmod 2755 {} \;;
           find spa -type f -exec chmod 0644 {} \;;"
+
 
 
