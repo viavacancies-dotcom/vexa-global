@@ -72,4 +72,4 @@ jobs:
           fi
 
       - name: Check formatting
-        run: pnpm run format.fix -- --check
+        run: pnpm run format:check
