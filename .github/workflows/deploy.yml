@@ -2,7 +2,7 @@ name: Deploy VPS (VEXA Static SPA)
 
 on:
   push:
-    branches: ["main"]   # поменяй на "master", если нужно
+    branches: ["main", "master"]
   workflow_dispatch:
 
 concurrency:
@@ -17,16 +17,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: "latest"
+
+      - name: Check pnpm
+        run: pnpm -v
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "pnpm"
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: "latest"
+          cache-dependency-path: pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -56,11 +60,9 @@ jobs:
           ssh "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" 'bash -lc "
             set -e
             cd /var/www/vexa-global/dist
-
             rm -rf spa.prev
             if [ -d spa ]; then mv spa spa.prev; fi
             mv spa.new spa
-
             chown -R deploy:www-data spa
             find spa -type d -exec chmod 2755 {} \;
             find spa -type f -exec chmod 0644 {} \;
