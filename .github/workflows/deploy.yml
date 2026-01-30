@@ -41,14 +41,26 @@ jobs:
 
       - name: Verify build output
         run: test -f dist/spa/index.html
-
-      - name: Setup SSH
+        
+      - name: SSH test
         run: |
+          ssh -i ~/.ssh/id_ed25519 -o BatchMode=yes "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "whoami && hostname"
+      - name: Setup SSH
+        shell: bash
+        run: |
+          set -e
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          printf "%s" "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+
+          cat > ~/.ssh/id_ed25519 <<'KEY'
+${{ secrets.VPS_SSH_KEY }}
+KEY
           chmod 600 ~/.ssh/id_ed25519
+
           ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+          ssh-keygen -l -f ~/.ssh/id_ed25519
 
       - name: Upload to VPS (rsync)
         run: |
