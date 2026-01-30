@@ -1,48 +1,81 @@
-name: Deploy
+name: Deploy VPS (VEXA Static SPA)
 
 on:
   push:
-    branches: [main]
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+concurrency:
+  group: vexa-deploy
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: "20.x"
-          cache: "npm"
+          node-version: "20"
+
+      - name: Enable Corepack (pnpm from packageManager)
+        run: |
+          corepack enable
+          pnpm -v
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm run test
-
-      - name: Type check
-        run: npm run typecheck
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: production-build
-          path: dist/
-          retention-days: 7
+      - name: Verify build output
+        run: test -f dist/spa/index.html
 
-      # Deployment step - Configure based on your hosting provider
-      # For Netlify:
-      # - Deploy using Netlify CLI or GitHub integration
-      # For Vercel:
-      # - Deploy using Vercel CLI or GitHub integration
-      # For other providers:
-      # - Configure appropriate deployment steps below
+      - name: Setup SSH
+        shell: bash
+        run: |
+          set -e
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
 
-      - name: Deploy notification
-        run: echo "Build completed successfully. Configure deployment steps based on your hosting provider (Netlify/Vercel)."
+          printf '%s\n' "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+
+          ssh-keyscan -H "${{ secrets.VPS_HOST }}" >> ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+          ssh-keygen -l -f ~/.ssh/id_ed25519
+
+      - name: SSH test
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o BatchMode=yes "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "whoami && hostname"
+
+      - name: Upload to VPS (rsync)
+        run: |
+          rsync -az --delete \
+            dist/spa/ \
+            "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/vexa-global/dist/spa.new/"
+
+      - name: Atomic switch on VPS
+        run: >
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}
+          "set -e;
+          cd /var/www/vexa-global/dist;
+          rm -rf spa.prev;
+          if [ -d spa ]; then mv spa spa.prev; fi;
+          mv spa.new spa;
+          find spa -type d -exec chmod 2755 {} \;;
+          find spa -type f -exec chmod 0644 {} \;;"
+
+
+
