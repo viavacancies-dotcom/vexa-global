@@ -17,7 +17,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
           node-version: "20"
@@ -32,7 +32,6 @@ jobs:
           if [ -f pnpm-lock.yaml ]; then
             pnpm install --frozen-lockfile
           else
-            echo "WARNING: pnpm-lock.yaml not found, installing without --frozen-lockfile"
             pnpm install
           fi
 
@@ -42,10 +41,7 @@ jobs:
       - name: Verify build output
         run: test -f dist/spa/index.html
 
-      - name: SSH test
-        run: |
-          ssh -i ~/.ssh/id_ed25519 -o BatchMode=yes "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "whoami && hostname"
-            - name: Setup SSH
+      - name: Setup SSH
         shell: bash
         run: |
           set -e
@@ -60,6 +56,9 @@ jobs:
 
           ssh-keygen -l -f ~/.ssh/id_ed25519
 
+      - name: SSH test
+        run: |
+          ssh -i ~/.ssh/id_ed25519 -o BatchMode=yes "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" "whoami && hostname"
 
       - name: Upload to VPS (rsync)
         run: |
@@ -76,10 +75,4 @@ jobs:
             if [ -d spa ]; then mv spa spa.prev; fi
             mv spa.new spa
             chown -R deploy:www-data spa
-            find spa -type d -exec chmod 2755 {} \;
-            find spa -type f -exec chmod 0644 {} \;
-          "'
-
-      - name: Warm check (HTTP)
-        run: |
-          ssh "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" 'curl -I -H "Host: vexa-global.com" http://127.0.0.1/ | head -n 5'
+            find spa -type d -exec

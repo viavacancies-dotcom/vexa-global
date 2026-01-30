@@ -10,35 +10,40 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          node-version: "20"
+
+      - name: Enable Corepack (pnpm from packageManager)
+        run: |
+          corepack enable
+          pnpm -v
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
 
       - name: Type check
-        run: npm run typecheck
+        run: pnpm run typecheck
 
       - name: Run tests
-        run: npm run test
+        run: pnpm run test
 
       - name: Build
-        run: npm run build
+        run: pnpm run build
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: build-${{ matrix.node-version }}
+          name: build
           path: dist/
           retention-days: 1
 
@@ -48,14 +53,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: "20.x"
-          cache: "npm"
+          node-version: "20"
+
+      - name: Enable Corepack (pnpm from packageManager)
+        run: |
+          corepack enable
+          pnpm -v
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+          fi
 
       - name: Check formatting
-        run: npm run format.fix -- --check
+        run: pnpm run format.fix -- --check
