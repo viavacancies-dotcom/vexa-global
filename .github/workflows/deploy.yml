@@ -67,12 +67,18 @@ jobs:
             "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/vexa-global/dist/spa.new/"
 
       - name: Atomic switch on VPS
+        shell: bash
         run: |
-          ssh "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" 'bash -lc "
-            set -e
-            cd /var/www/vexa-global/dist
-            rm -rf spa.prev
-            if [ -d spa ]; then mv spa spa.prev; fi
-            mv spa.new spa
-            chown -R deploy:www-data spa
-            find spa -type d -exec
+          ssh "${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}" 'bash -s' <<'REMOTE'
+          set -e
+          cd /var/www/vexa-global/dist
+
+          rm -rf spa.prev
+          if [ -d spa ]; then mv spa spa.prev; fi
+          mv spa.new spa
+
+          chown -R deploy:www-data spa
+          find spa -type d -exec chmod 2755 {} \;
+          find spa -type f -exec chmod 0644 {} \;
+REMOTE
+
