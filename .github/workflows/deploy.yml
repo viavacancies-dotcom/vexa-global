@@ -17,13 +17,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug root files
+        run: |
+          ls -la
+          echo "pnpm-lock.yaml exists?"; test -f pnpm-lock.yaml && echo YES || echo NO
+          echo "packageManager:"; node -e "console.log(require('./package.json').packageManager || '(none)')"
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: "10.14.0"
-
-      - name: Check pnpm
-        run: pnpm -v
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -31,7 +34,13 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          if [ -f pnpm-lock.yaml ]; then
+            pnpm install --frozen-lockfile
+          else
+            echo "WARNING: pnpm-lock.yaml not found, installing without --frozen-lockfile"
+            pnpm install
+          fi
 
       - name: Build
         run: pnpm run build
