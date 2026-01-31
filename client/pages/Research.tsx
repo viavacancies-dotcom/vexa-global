@@ -141,7 +141,7 @@ export default function Research() {
                   <Filter className="h-5 w-5 text-primary" />
                 </div>
                 <h2 className="text-lg font-garet font-semibold text-foreground">
-                  Advanced Filters
+                  Advanced filters
                 </h2>
               </div>
               <ChevronDown
