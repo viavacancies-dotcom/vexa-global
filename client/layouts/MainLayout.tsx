@@ -145,7 +145,7 @@ contact@vexaglobal.org`;
             style={{ height: "80px" }}
           >
             {/* Logo / Institute Name */}
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2 ml-4">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F30cffefbd891455492f8e1b92fb414ad%2F71548cef8d674304ac09344916bd53c8?format=webp&width=800&height=1200"
                 alt="Vexa Global"
